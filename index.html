@@ -46,18 +46,23 @@
     </section>
   </div>
 
+  <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <!-- Firebase SDK -->
+  <!-- Firebase compat SDK -->
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
   <script>
-    // TODO: thay thế bằng config của bạn từ Firebase console
+    // Firebase config của bạn
     const firebaseConfig = {
-      apiKey: "YOUR_API_KEY",
-      authDomain: "YOUR_PROJECT.firebaseapp.com",
-      projectId: "YOUR_PROJECT_ID",
-      // ...other config
+      apiKey: "AIzaSyDFAu80468VblytwF2UmKXGRAhRM5odGG8",
+      authDomain: "embongtienganh.firebaseapp.com",
+      projectId: "embongtienganh",
+      storageBucket: "embongtienganh.firebasestorage.app",
+      messagingSenderId: "616191414364",
+      appId: "1:616191414364:web:91a358db8a8a04f69f5699",
+      measurementId: "G-X9KNG69VPN"
     };
+    // Khởi tạo Firebase + Firestore
     firebase.initializeApp(firebaseConfig);
     const db = firebase.firestore();
   </script>
