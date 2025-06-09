@@ -2,15 +2,29 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz Từ Mới</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="quiz-container">
-    <h2 id="question">Đang tải…</h2>
-    <div class="options"></div>
-    <button id="next-btn" style="display:none">Tiếp theo</button>
+  <div id="login-container">
+    <h2>Đăng nhập để tiếp tục</h2>
+    <input id="username-input" type="text" placeholder="Tên tài khoản" />
+    <button id="login-btn">Đăng nhập</button>
   </div>
+
+  <div id="quiz-container" style="display:none">
+    <header>
+      <div id="welcome"></div>
+      <div id="stats">Câu 0/0 (Đúng: 0)</div>
+    </header>
+    <div class="quiz-box">
+      <h2 id="question">Đang tải…</h2>
+      <div class="options"></div>
+      <button id="next-btn" style="display:none">Tiếp theo</button>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
