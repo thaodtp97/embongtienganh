@@ -2,7 +2,7 @@ const SESSION_SIZE = 50;
 let data, sessionWords, currentIdx;
 let user, streakCount, lastSessionDate;
 let answeredCount, correctCount;
-let srsData;
+let srsData, wrongWords;
 
 async function loadData() {
   data = await fetch('data.json').then(r => r.json());
@@ -37,7 +37,7 @@ function initQuiz() {
   lastSessionDate = localStorage.getItem(user + '_lastDate') || null;
   updateStreakDisplay();
 
-  // session resume or new
+  // resume or new session
   const sessKey = user + '_session';
   const idxKey  = user + '_sessionIdx';
   const storedSess = localStorage.getItem(sessKey);
@@ -52,10 +52,14 @@ function initQuiz() {
   answeredCount = parseInt(localStorage.getItem(user + '_answered')) || 0;
   correctCount  = parseInt(localStorage.getItem(user + '_correct'))  || 0;
 
+  // init wrongWords
+  wrongWords = [];
+
   // show UI
   document.getElementById('login-container').style.display = 'none';
   document.getElementById('quiz-container').style.display  = 'block';
   document.getElementById('welcome').textContent = `Xin chào, ${user}`;
+  document.getElementById('show-analytics-btn').style.display = 'inline-block';
   renderHistory();
   updateHeader();
   showQuestion();
@@ -117,7 +121,10 @@ function selectAnswer(btn, item) {
   const cur = sessionWords[currentIdx];
   const isCorrect = item.word === cur.word;
   if (isCorrect) correctCount++;
-  else btn.classList.add('wrong');
+  else {
+    btn.classList.add('wrong');
+    wrongWords.push(cur.word);
+  }
 
   if (!isCorrect) {
     document.querySelectorAll('.option-btn').forEach(b => {
@@ -132,13 +139,10 @@ function selectAnswer(btn, item) {
     if (s.rep === 1) s.interval = 1;
     else if (s.rep === 2) s.interval = 6;
     else s.interval = Math.ceil(s.interval * s.ease);
-    s.nextReview = new Date(Date.now() + s.interval*24*3600*1000)
-      .toISOString();
+    s.nextReview = new Date(Date.now() + s.interval*24*3600*1000).toISOString();
   } else {
-    s.rep = 0;
-    s.interval = 1;
-    s.nextReview = new Date(Date.now() + 24*3600*1000)
-      .toISOString();
+    s.rep = 0; s.interval = 1;
+    s.nextReview = new Date(Date.now() + 24*3600*1000).toISOString();
   }
   localStorage.setItem('srs_data', JSON.stringify(srsData));
 
@@ -166,8 +170,7 @@ document.getElementById('end-session-btn').onclick = endSession;
 function endSession() {
   // update streak
   const today = new Date().toISOString().slice(0,10);
-  if (lastSessionDate ===
-      new Date(Date.now()-24*3600*1000).toISOString().slice(0,10))
+  if (lastSessionDate === new Date(Date.now()-24*3600*1000).toISOString().slice(0,10))
     streakCount++;
   else if (lastSessionDate !== today)
     streakCount = 1;
@@ -175,22 +178,31 @@ function endSession() {
   localStorage.setItem(user + '_streak', streakCount);
   localStorage.setItem(user + '_lastDate', today);
 
-  // save history
+  // save local history
   const histKey = user + '_history';
-  const prev = JSON.parse(localStorage.getItem(histKey) || '[]');
+  const prev   = JSON.parse(localStorage.getItem(histKey) || '[]');
   prev.push({
     date: new Date().toISOString(),
     correct: correctCount,
     total: answeredCount,
-    pct: answeredCount
-      ? Math.round(correctCount/answeredCount*100)
-      : 0
+    pct: answeredCount ? Math.round(correctCount/answeredCount*100) : 0,
+    mistakes: wrongWords
   });
   localStorage.setItem(histKey, JSON.stringify(prev));
+
+  // push lên Firestore
+  db.collection('sessions').add({
+    user,
+    date: new Date().toISOString(),
+    correct: correctCount,
+    total: answeredCount,
+    mistakes: wrongWords
+  }).catch(err => console.error("Firestore error:", err));
 
   // clear session
   localStorage.removeItem(user + '_session');
   localStorage.removeItem(user + '_sessionIdx');
+
   initQuiz();
 }
 
@@ -206,13 +218,43 @@ function renderHistory() {
     const tr = document.createElement('tr');
     tr.innerHTML =
       `<td>${new Date(rec.date).toLocaleString()}</td>` +
-      `<td>${rec.correct}</td><td>${rec.total}</td><td>${rec.pct}%</td>`;
+      `<td>${rec.correct}</td><td>${rec.total}</td>` +
+      `<td>${rec.pct}%</td>` +
+      `<td>${(rec.mistakes||[]).join(', ')}</td>`;
     tbody.append(tr);
   });
   document.getElementById('history-container').style.display = 'block';
 }
 
-// login handler
+document.getElementById('show-analytics-btn').onclick = showAnalytics;
+
+function showAnalytics() {
+  const hist = JSON.parse(localStorage.getItem(user + '_history') || '[]');
+  const counts = {};
+  hist.forEach(r => (r.mistakes||[]).forEach(w => counts[w] = (counts[w]||0)+1));
+  const entries = Object.entries(counts).sort((a,b)=>b[1]-a[1]).slice(0,10);
+  const labels = entries.map(e=>e[0]), values = entries.map(e=>e[1]);
+
+  const ctx = document.getElementById('mistakeChart').getContext('2d');
+  if (window.mistakeChart) window.mistakeChart.destroy();
+  window.mistakeChart = new Chart(ctx, {
+    type: 'bar',
+    data: { labels, datasets:[{ label:'Lỗi sai', data:values, backgroundColor:'#f44336' }]},
+    options: { scales:{ y:{ beginAtZero:true }}}
+  });
+
+  const ul = document.getElementById('mistakeList'); ul.innerHTML = '';
+  entries.forEach(([w,c]) => {
+    const li = document.createElement('li');
+    li.textContent = `${w}: sai ${c} lần`;
+    ul.append(li);
+  });
+
+  document.getElementById('analytics').style.display = 'block';
+  document.getElementById('analytics').scrollIntoView({behavior:'smooth'});
+}
+
+// login
 document.getElementById('login-btn').onclick = () => {
   const v = document.getElementById('username-input').value.trim();
   if (!v) return alert('Nhập tên tài khoản!');
@@ -221,7 +263,7 @@ document.getElementById('login-btn').onclick = () => {
   initQuiz();
 };
 
-// utils
+// util
 function shuffle(arr) { return arr.sort(()=>Math.random()-0.5); }
 
 loadData();
