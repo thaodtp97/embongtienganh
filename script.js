@@ -1,47 +1,107 @@
-let data, current;
-let totalQ, answered, correct;
-let user;
+const SESSION_SIZE = 50;
+let data, sessionWords, currentIdx;
+let user, streakCount, lastSessionDate;
+let answeredCount, correctCount;
+let srsData;
 
 async function loadData() {
   data = await fetch('data.json').then(r => r.json());
-  totalQ = data.length;
-  // Load user & stats từ localStorage
+  initSRS();
   user = localStorage.getItem('quiz_user') || null;
   if (user) initQuiz();
 }
 
+function initSRS() {
+  const key = 'srs_data';
+  const stored = localStorage.getItem(key);
+  if (stored) {
+    srsData = JSON.parse(stored);
+  } else {
+    srsData = data.map(item => ({
+      word: item.word,
+      pos: item.pos,
+      phonetic: item.phonetic,
+      meaning: item.meaning,
+      rep: 0,
+      interval: 1,
+      ease: 2.5,
+      nextReview: new Date().toISOString()
+    }));
+    localStorage.setItem(key, JSON.stringify(srsData));
+  }
+}
+
 function initQuiz() {
-  answered = parseInt(localStorage.getItem(user + '_answered')) || 0;
-  correct  = parseInt(localStorage.getItem(user + '_correct'))  || 0;
+  // streak
+  streakCount = parseInt(localStorage.getItem(user + '_streak')) || 0;
+  lastSessionDate = localStorage.getItem(user + '_lastDate') || null;
+  updateStreakDisplay();
+
+  // session resume or new
+  const sessKey = user + '_session';
+  const idxKey  = user + '_sessionIdx';
+  const storedSess = localStorage.getItem(sessKey);
+  if (storedSess) {
+    sessionWords = JSON.parse(storedSess);
+    currentIdx   = parseInt(localStorage.getItem(idxKey)) || 0;
+  } else {
+    buildNewSession();
+  }
+
+  // counters
+  answeredCount = parseInt(localStorage.getItem(user + '_answered')) || 0;
+  correctCount  = parseInt(localStorage.getItem(user + '_correct'))  || 0;
+
+  // show UI
   document.getElementById('login-container').style.display = 'none';
   document.getElementById('quiz-container').style.display  = 'block';
   document.getElementById('welcome').textContent = `Xin chào, ${user}`;
-  updateStats();
-  nextQuestion();
+  renderHistory();
+  updateHeader();
+  showQuestion();
 }
 
-function updateStats() {
-  document.getElementById('stats').textContent =
-    `Câu ${answered+1}/${totalQ} (Đúng: ${correct})`;
+function buildNewSession() {
+  const now = new Date();
+  let due = srsData.filter(item => new Date(item.nextReview) <= now);
+  if (due.length < SESSION_SIZE) due = [...srsData];
+  sessionWords = shuffle(due).slice(0, SESSION_SIZE);
+  localStorage.setItem(user + '_session', JSON.stringify(sessionWords));
+  currentIdx = 0;
+  localStorage.setItem(user + '_sessionIdx', currentIdx);
+  answeredCount = 0;
+  correctCount  = 0;
+  localStorage.setItem(user + '_answered', answeredCount);
+  localStorage.setItem(user + '_correct',  correctCount);
 }
 
-function shuffle(a) { return a.sort(() => Math.random() - 0.5); }
+function updateStreakDisplay() {
+  document.getElementById('streak').textContent = `Streak: ${streakCount} ngày`;
+}
 
-function nextQuestion() {
+function updateHeader() {
+  const qNum = Math.min(currentIdx + 1, SESSION_SIZE);
+  const accuracy = answeredCount
+    ? ((correctCount/answeredCount)*100).toFixed(0)
+    : 0;
+  document.getElementById('session-stats').textContent =
+    `Câu ${qNum}/${SESSION_SIZE} (Đúng: ${correctCount}) - Accuracy: ${accuracy}%`;
+}
+
+function showQuestion() {
   document.querySelector('.options').innerHTML = '';
   document.getElementById('next-btn').style.display = 'none';
+  document.getElementById('end-session-btn').style.display = 'none';
 
-  current = data[Math.floor(Math.random() * totalQ)];
+  if (currentIdx >= sessionWords.length) return endSession();
+  const cur = sessionWords[currentIdx];
   document.getElementById('question').textContent =
-    `Chọn từ tương ứng với nghĩa: "${current.meaning}"`;
+    `Chọn từ tương ứng với nghĩa: "${cur.meaning}"`;
 
-  let answers = [current];
-  let others = data.filter(d => d.word !== current.word);
-  shuffle(others);
-  answers.push(...others.slice(0, 3));
-  shuffle(answers);
-
-  answers.forEach(item => {
+  const opts = [cur, ...shuffle(
+    srsData.filter(i => i.word!==cur.word)
+  ).slice(0,3)];
+  shuffle(opts).forEach(item => {
     const btn = document.createElement('button');
     btn.className = 'option-btn';
     btn.innerHTML =
@@ -53,35 +113,115 @@ function nextQuestion() {
 }
 
 function selectAnswer(btn, item) {
-  document.querySelectorAll('.option-btn').forEach(b => b.disabled = true);
-  const isCorrect = item.word === current.word;
-  if (isCorrect) {
-    btn.classList.add('correct');
-    correct++;
-  } else {
-    btn.classList.add('wrong');
+  document.querySelectorAll('.option-btn').forEach(b=>b.disabled=true);
+  const cur = sessionWords[currentIdx];
+  const isCorrect = item.word === cur.word;
+  if (isCorrect) correctCount++;
+  else btn.classList.add('wrong');
+
+  if (!isCorrect) {
     document.querySelectorAll('.option-btn').forEach(b => {
-      if (b.innerText.includes(current.word)) b.classList.add('correct');
+      if (b.innerText.includes(cur.word)) b.classList.add('correct');
     });
+  } else btn.classList.add('correct');
+
+  // update SRS
+  const s = srsData.find(i => i.word===cur.word);
+  if (isCorrect) {
+    s.rep++;
+    if (s.rep === 1) s.interval = 1;
+    else if (s.rep === 2) s.interval = 6;
+    else s.interval = Math.ceil(s.interval * s.ease);
+    s.nextReview = new Date(Date.now() + s.interval*24*3600*1000)
+      .toISOString();
+  } else {
+    s.rep = 0;
+    s.interval = 1;
+    s.nextReview = new Date(Date.now() + 24*3600*1000)
+      .toISOString();
   }
-  answered++;
-  localStorage.setItem(user + '_answered', answered);
-  localStorage.setItem(user + '_correct',  correct);
+  localStorage.setItem('srs_data', JSON.stringify(srsData));
 
-  // Play audio
-  new Audio(`audio/${current.word.replace(/ /g, '_').replace(/\//g, '_')}.mp3`).play();
+  answeredCount++;
+  localStorage.setItem(user + '_answered', answeredCount);
+  localStorage.setItem(user + '_correct',  correctCount);
+  localStorage.setItem(user + '_sessionIdx', currentIdx);
 
-  updateStats();
+  // play audio
+  new Audio(`audio/${cur.word.replace(/ /g,'_')}.mp3`).play();
+
+  updateHeader();
   document.getElementById('next-btn').style.display = 'inline-block';
+  document.getElementById('end-session-btn').style.display = 'inline-block';
 }
 
-document.getElementById('next-btn').onclick = nextQuestion;
+document.getElementById('next-btn').onclick = () => {
+  currentIdx++;
+  showQuestion();
+  updateHeader();
+};
+
+document.getElementById('end-session-btn').onclick = endSession;
+
+function endSession() {
+  // update streak
+  const today = new Date().toISOString().slice(0,10);
+  if (lastSessionDate ===
+      new Date(Date.now()-24*3600*1000).toISOString().slice(0,10))
+    streakCount++;
+  else if (lastSessionDate !== today)
+    streakCount = 1;
+  lastSessionDate = today;
+  localStorage.setItem(user + '_streak', streakCount);
+  localStorage.setItem(user + '_lastDate', today);
+
+  // save history
+  const histKey = user + '_history';
+  const prev = JSON.parse(localStorage.getItem(histKey) || '[]');
+  prev.push({
+    date: new Date().toISOString(),
+    correct: correctCount,
+    total: answeredCount,
+    pct: answeredCount
+      ? Math.round(correctCount/answeredCount*100)
+      : 0
+  });
+  localStorage.setItem(histKey, JSON.stringify(prev));
+
+  // clear session
+  localStorage.removeItem(user + '_session');
+  localStorage.removeItem(user + '_sessionIdx');
+  initQuiz();
+}
+
+function renderHistory() {
+  const histKey = user + '_history';
+  const histJson = localStorage.getItem(histKey);
+  if (!histJson) return;
+  const hist = JSON.parse(histJson);
+  if (!hist.length) return;
+  const tbody = document.querySelector('#history-table tbody');
+  tbody.innerHTML = '';
+  hist.forEach(rec => {
+    const tr = document.createElement('tr');
+    tr.innerHTML =
+      `<td>${new Date(rec.date).toLocaleString()}</td>` +
+      `<td>${rec.correct}</td><td>${rec.total}</td><td>${rec.pct}%</td>`;
+    tbody.append(tr);
+  });
+  document.getElementById('history-container').style.display = 'block';
+}
+
+// login handler
 document.getElementById('login-btn').onclick = () => {
-  const input = document.getElementById('username-input').value.trim();
-  if (!input) return alert('Nhập tên tài khoản!');
-  user = input;
+  const v = document.getElementById('username-input').value.trim();
+  if (!v) return alert('Nhập tên tài khoản!');
+  user = v;
   localStorage.setItem('quiz_user', user);
   initQuiz();
 };
+
+// utils
+function shuffle(arr) { return arr.sort(()=>Math.random()-0.5); }
 
 loadData();
