@@ -16,12 +16,23 @@
   <div id="quiz-container" style="display:none">
     <header>
       <div id="welcome"></div>
-      <div id="stats">Câu 0/0 (Đúng: 0)</div>
+      <div id="streak">Streak: 0 ngày</div>
+      <div id="session-stats">Câu 0/0 (Đúng: 0) - Accuracy: 0%</div>
     </header>
     <div class="quiz-box">
       <h2 id="question">Đang tải…</h2>
       <div class="options"></div>
-      <button id="next-btn" style="display:none">Tiếp theo</button>
+      <div class="controls">
+        <button id="next-btn" style="display:none">Tiếp theo</button>
+        <button id="end-session-btn" style="display:none">Kết thúc session</button>
+      </div>
+    </div>
+    <div id="history-container" style="display:none">
+      <h3>Lịch sử học</h3>
+      <table id="history-table">
+        <thead><tr><th>Ngày</th><th>Đúng</th><th>Tổng</th><th>%</th></tr></thead>
+        <tbody></tbody>
+      </table>
     </div>
   </div>
 
