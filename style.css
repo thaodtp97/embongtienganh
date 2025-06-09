@@ -29,12 +29,13 @@ body {
 #login-container button:hover { background:#43a047; }
 
 header {
-  display:flex; flex-direction:column; align-items:flex-start;
-  margin-bottom:1rem;
+  display:flex; align-items:center; margin-bottom:1rem;
 }
+#welcome { font-weight:bold; flex:1; }
 #streak, #session-stats {
-  font-size:0.9rem; color:#555; margin-top:0.25rem;
+  font-size:0.9rem; color:#555; margin-left:1rem;
 }
+#show-analytics-btn { margin-left:auto; }
 
 .quiz-box h2 {
   margin:0 0 1rem; font-size:1.25rem; color:#333;
@@ -53,8 +54,7 @@ header {
 .option-btn.wrong   { border-color:#f44336; }
 
 .controls {
-  display:flex; justify-content:space-between;
-  margin-bottom:1rem;
+  display:flex; justify-content:space-between; margin-bottom:1rem;
 }
 #next-btn, #end-session-btn {
   padding:0.5rem 1rem; border:none; border-radius:6px;
@@ -71,3 +71,5 @@ header {
 #history-table th, #history-table td {
   padding:0.5rem; border:1px solid #ddd; text-align:center;
 }
+
+#analytics { margin-top:2rem; }
