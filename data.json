@@ -1,0 +1,2480 @@
+[
+  {
+    "word": "backpack",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈbækpæk/",
+    "meaning": "cặp sách"
+  },
+  {
+    "word": "blackboard",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈblækbɔːrd/",
+    "meaning": "bảng đen"
+  },
+  {
+    "word": "boarding school",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈbɔːrdɪŋ skuːl/",
+    "meaning": "trường nội trú"
+  },
+  {
+    "word": "bookcase",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈbʊkkeɪs/",
+    "meaning": "tủ sách"
+  },
+  {
+    "word": "break time",
+    "pos": "noun (danh từ)",
+    "phonetic": "/breɪk taɪm/",
+    "meaning": "giờ nghỉ giải lao"
+  },
+  {
+    "word": "canteen",
+    "pos": "noun (danh từ)",
+    "phonetic": "/kænˈtiːn/",
+    "meaning": "căng tin, nơi bán đồ ăn"
+  },
+  {
+    "word": "calculator",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈkælkjuleɪtər/",
+    "meaning": "máy tính cầm tay"
+  },
+  {
+    "word": "chemistry",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈkemɪstri/",
+    "meaning": "môn Hóa học"
+  },
+  {
+    "word": "classroom",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈklæsruːm/",
+    "meaning": "lớp học"
+  },
+  {
+    "word": "cloakroom",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈkləʊkrʊm/",
+    "meaning": "phòng treo giữ đồ"
+  },
+  {
+    "word": "colored paper",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈkʌlərd ˈpeɪpər/",
+    "meaning": "giấy màu"
+  },
+  {
+    "word": "colored pencil",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈkʌlərd ˈpensl/",
+    "meaning": "bút chì màu"
+  },
+  {
+    "word": "compass",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈkʌmpəs/",
+    "meaning": "la bàn"
+  },
+  {
+    "word": "computer room",
+    "pos": "noun (danh từ)",
+    "phonetic": "/kəmˈpjuːtər rʊm/",
+    "meaning": "phòng máy tính"
+  },
+  {
+    "word": "do exercise",
+    "pos": "verb phrase (cụm động từ)",
+    "phonetic": "/duː ˈeksərsaɪz/",
+    "meaning": "tập thể dục"
+  },
+  {
+    "word": "do homework",
+    "pos": "verb phrase (cụm động từ)",
+    "phonetic": "/duː ˈhəʊmwɜːk/",
+    "meaning": "làm bài tập về nhà"
+  },
+  {
+    "word": "e-book",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈiː bʊk/",
+    "meaning": "sách điện tử"
+  },
+  {
+    "word": "geography",
+    "pos": "noun (danh từ)",
+    "phonetic": "/dʒiˈɑːɡrəfi/",
+    "meaning": "môn Địa lý"
+  },
+  {
+    "word": "glue",
+    "pos": "noun (danh từ)",
+    "phonetic": "ɡluː",
+    "meaning": "hồ dán, băng keo"
+  },
+  {
+    "word": "go shopping",
+    "pos": "verb phrase (cụm động từ)",
+    "phonetic": "/ɡəʊ /ˈʃɑːpɪŋ/",
+    "meaning": "đi mua sắm"
+  },
+  {
+    "word": "greenhouse",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈɡriːnhaʊs/",
+    "meaning": "nhà kính"
+  },
+  {
+    "word": "have lunch",
+    "pos": "verb phrase (cụm động từ)",
+    "phonetic": "/həv lʌntʃ/",
+    "meaning": "ăn trưa"
+  },
+  {
+    "word": "highlighter",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈhaɪlaɪtər/",
+    "meaning": "bút đánh dấu"
+  },
+  {
+    "word": "history",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈhɪstri/",
+    "meaning": "môn Lịch sử"
+  },
+  {
+    "word": "IT",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˌaɪ ˈtiː/",
+    "meaning": "công nghệ thông tin"
+  },
+  {
+    "word": "international school",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˌɪntərˈnæʃnəl skuːl/",
+    "meaning": "trường quốc tế"
+  },
+  {
+    "word": "laboratory",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈlæbrətɔːri/",
+    "meaning": "phòng thí nghiệm"
+  },
+  {
+    "word": "library",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈlaɪbrəri/",
+    "meaning": "thư viện"
+  },
+  {
+    "word": "literature",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈlɪtrətʃər/",
+    "meaning": "môn Văn"
+  },
+  {
+    "word": "maths",
+    "pos": "noun (danh từ)",
+    "phonetic": "mæθs",
+    "meaning": "môn Toán"
+  },
+  {
+    "word": "music",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈmjuːzɪk/",
+    "meaning": "môn Âm nhạc"
+  },
+  {
+    "word": "notebook",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈnəʊtbʊk/",
+    "meaning": "sổ tay"
+  },
+  {
+    "word": "paper clip",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈpeɪpər klɪp/",
+    "meaning": "kẹp giấy"
+  },
+  {
+    "word": "pencil case",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈpensl keɪs/",
+    "meaning": "hộp bút"
+  },
+  {
+    "word": "pencil sharpener",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈpensl ʃɑːrpnər/",
+    "meaning": "gọt bút chì"
+  },
+  {
+    "word": "photography",
+    "pos": "noun (danh từ)",
+    "phonetic": "/fəˈtɑːɡrəfi/",
+    "meaning": "nhiếp ảnh"
+  },
+  {
+    "word": "physical education",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˌfɪzɪkl edʒuˈkeɪʃn/",
+    "meaning": "môn thể dục"
+  },
+  {
+    "word": "physics",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈfiziks/",
+    "meaning": "môn Vật lý"
+  },
+  {
+    "word": "playground",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈpleɪɡraʊnd/",
+    "meaning": "sân chơi"
+  },
+  {
+    "word": "rubber",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈrʌbər/",
+    "meaning": "cục gôm, tẩy"
+  },
+  {
+    "word": "ruler",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈruːlər/",
+    "meaning": "thước kẻ"
+  },
+  {
+    "word": "schoolchild",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈskuːltʃaɪld/",
+    "meaning": "trẻ em trong tuổi đi học"
+  },
+  {
+    "word": "school supply",
+    "pos": "noun (danh từ)",
+    "phonetic": "/skuːl səˈplaɪ/",
+    "meaning": "dụng cụ học tập"
+  },
+  {
+    "word": "science",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈsaɪəns/",
+    "meaning": "môn Khoa học"
+  },
+  {
+    "word": "secondary school",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈsekəndri skuːl/",
+    "meaning": "trường Cấp 2, Trung học cơ sở"
+  },
+  {
+    "word": "swimming pool",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈswɪmɪŋ puːl/",
+    "meaning": "bể bơi"
+  },
+  {
+    "word": "stapler",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈsteɪplər/",
+    "meaning": "dụng cụ dập ghim"
+  },
+  {
+    "word": "study",
+    "pos": "verb (động từ)",
+    "phonetic": "/ˈstʌdi/",
+    "meaning": "học tập"
+  },
+  {
+    "word": "uniform",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈjuːnɪfɔːrm/",
+    "meaning": "đồng phục"
+  },
+  {
+    "word": "workshop",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈwɜːrkʃɑːp/",
+    "meaning": "buổi thảo luận"
+  },
+  {
+    "word": "armchair",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈɑːrmtʃer/",
+    "meaning": "ghế bành"
+  },
+  {
+    "word": "balcony",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈbælkəni/",
+    "meaning": "ban công"
+  },
+  {
+    "word": "bath",
+    "pos": "noun (danh từ), verb (động từ)",
+    "phonetic": "/bæθ/",
+    "meaning": "bồn tắm, tắm bồn"
+  },
+  {
+    "word": "bathroom",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈbæθrʊm/",
+    "meaning": "nhà vệ sinh, nhà tắm"
+  },
+  {
+    "word": "bedroom",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈbedrʊm/",
+    "meaning": "phòng ngủ"
+  },
+  {
+    "word": "bookshelf",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈbʊkʃelf/",
+    "meaning": "giá sách"
+  },
+  {
+    "word": "bowl",
+    "pos": "noun (danh từ)",
+    "phonetic": "/bəʊl/",
+    "meaning": "cái bát, tô"
+  },
+  {
+    "word": "carpet",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈkɑːrpɪt/",
+    "meaning": "tấm thảm, cái thảm"
+  },
+  {
+    "word": "chest of drawers",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˌtʃest əv ˈdrɔːrz/",
+    "meaning": "tủ có nhiều ngăn kéo"
+  },
+  {
+    "word": "chopstick",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈtʃɑːpstɪk/",
+    "meaning": "đũa"
+  },
+  {
+    "word": "clock",
+    "pos": "noun (danh từ)",
+    "phonetic": "/klɒk/",
+    "meaning": "đồng hồ"
+  },
+  {
+    "word": "computer",
+    "pos": "noun (danh từ)",
+    "phonetic": "/kəmˈpjuːtər/",
+    "meaning": "máy vi tính"
+  },
+  {
+    "word": "cupboard",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈkʌbərd/",
+    "meaning": "chạn bát, tủ bếp"
+  },
+  {
+    "word": "curtain",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈkɜːrtn/",
+    "meaning": "rèm cửa"
+  },
+  {
+    "word": "dishwasher",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈdɪʃwɔːʃər/",
+    "meaning": "máy rửa bát"
+  },
+  {
+    "word": "freezer",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈfriːzər/",
+    "meaning": "tủ cấp đông"
+  },
+  {
+    "word": "fridge",
+    "pos": "noun (danh từ)",
+    "phonetic": "/frɪdʒ/",
+    "meaning": "tủ lạnh"
+  },
+  {
+    "word": "furniture",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈfɜːrnɪtʃər/",
+    "meaning": "đồ nội thất"
+  },
+  {
+    "word": "garden",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈɡɑːrdn/",
+    "meaning": "vườn"
+  },
+  {
+    "word": "hall",
+    "pos": "noun (danh từ)",
+    "phonetic": "/hɔːl/",
+    "meaning": "hành lang, đại sảnh"
+  },
+  {
+    "word": "kitchen",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈkɪtʃɪn/",
+    "meaning": "bếp, phòng ăn"
+  },
+  {
+    "word": "lamp",
+    "pos": "noun (danh từ)",
+    "phonetic": "/læmp/",
+    "meaning": "đèn bàn"
+  },
+  {
+    "word": "living room",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈlɪvɪŋ ruːm/",
+    "meaning": "phòng khách"
+  },
+  {
+    "word": "microwave",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈmaɪkrəweɪv/",
+    "meaning": "lò vi sóng"
+  },
+  {
+    "word": "pillow",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈpɪləʊ/",
+    "meaning": "cái gối"
+  },
+  {
+    "word": "poster",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈpəʊstər/",
+    "meaning": "tấm áp phích"
+  },
+  {
+    "word": "shower",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈʃaʊər/",
+    "meaning": "vòi hoa sen"
+  },
+  {
+    "word": "sink",
+    "pos": "noun (danh từ)",
+    "phonetic": "/sɪŋk/",
+    "meaning": "bồn rửa"
+  },
+  {
+    "word": "sofa",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈsəʊfə/",
+    "meaning": "sô pha, ghế trường kỷ"
+  },
+  {
+    "word": "table",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈteɪbl/",
+    "meaning": "cái bàn"
+  },
+  {
+    "word": "television",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈtelɪvɪʒn/",
+    "meaning": "cái tivi"
+  },
+  {
+    "word": "toilet",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈtɔɪlət/",
+    "meaning": "nhà vệ sinh, bồn cầu"
+  },
+  {
+    "word": "vase",
+    "pos": "noun (danh từ)",
+    "phonetic": "/veɪs/",
+    "meaning": "bình cắm hoa"
+  },
+  {
+    "word": "wardrobe",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈwɔːrdrəʊb/",
+    "meaning": "tủ quần áo"
+  },
+  {
+    "word": "window",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈwɪndəʊ/",
+    "meaning": "cửa sổ"
+  },
+  {
+    "word": "active",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈæktɪv/",
+    "meaning": "chủ động, hoạt bát"
+  },
+  {
+    "word": "arm",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ɑːrm/",
+    "meaning": "cánh tay"
+  },
+  {
+    "word": "blonde",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/blɑːnd/",
+    "meaning": "(tóc) vàng hoe"
+  },
+  {
+    "word": "care",
+    "pos": "verb (động từ)",
+    "phonetic": "/keər/",
+    "meaning": "quan tâm, chăm sóc"
+  },
+  {
+    "word": "careful",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈkerfl/",
+    "meaning": "cẩn thận"
+  },
+  {
+    "word": "caring",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈkeərɪŋ/",
+    "meaning": "chu đáo, biết quan tâm"
+  },
+  {
+    "word": "cheek",
+    "pos": "noun (danh từ)",
+    "phonetic": "/tʃiːk/",
+    "meaning": "má (trên khuôn mặt)"
+  },
+  {
+    "word": "chest",
+    "pos": "noun (danh từ)",
+    "phonetic": "/tʃest/",
+    "meaning": "ngực"
+  },
+  {
+    "word": "clever",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈklevər/",
+    "meaning": "thông minh, nhanh nhẹn"
+  },
+  {
+    "word": "confident",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈkɑːnfɪdənt/",
+    "meaning": "tự tin"
+  },
+  {
+    "word": "creative",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/kriˈeɪtɪv/",
+    "meaning": "sáng tạo"
+  },
+  {
+    "word": "curly",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈkɝː.li/",
+    "meaning": "(tóc) xoăn"
+  },
+  {
+    "word": "cute",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/kjuːt/",
+    "meaning": "dễ thương"
+  },
+  {
+    "word": "cycle to school",
+    "pos": "verb phrase (cụm động từ)",
+    "phonetic": "/ˈsaɪkl tə skuːl/",
+    "meaning": "đạp xe đến trường"
+  },
+  {
+    "word": "ear",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ɪr/",
+    "meaning": "tai"
+  },
+  {
+    "word": "elbow",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈelbəʊ/",
+    "meaning": "khuỷu tay"
+  },
+  {
+    "word": "eye",
+    "pos": "noun (danh từ)",
+    "phonetic": "/aɪ/",
+    "meaning": "mắt"
+  },
+  {
+    "word": "finger",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈfɪŋɡər/",
+    "meaning": "ngón tay"
+  },
+  {
+    "word": "foot",
+    "pos": "noun (danh từ)",
+    "phonetic": "/fʊt/",
+    "meaning": "bàn chân"
+  },
+  {
+    "word": "friendly",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈfrendli/",
+    "meaning": "thân thiện"
+  },
+  {
+    "word": "funny",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈfʌni/",
+    "meaning": "hài hước, vui nhộn"
+  },
+  {
+    "word": "generous",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈdʒenərəs/",
+    "meaning": "hào phóng, phóng khoáng"
+  },
+  {
+    "word": "go swimming",
+    "pos": "verb phrase (cụm động từ)",
+    "phonetic": "/ɡəʊ ˈswɪmɪŋ/",
+    "meaning": "đi bơi"
+  },
+  {
+    "word": "good-looking",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˌɡʊd ˈlʊkɪŋ/",
+    "meaning": "đẹp, ưa nhìn"
+  },
+  {
+    "word": "hair",
+    "pos": "noun (danh từ)",
+    "phonetic": "/her/",
+    "meaning": "tóc"
+  },
+  {
+    "word": "hand",
+    "pos": "noun (danh từ)",
+    "phonetic": "/hænd/",
+    "meaning": "bàn tay"
+  },
+  {
+    "word": "hard-working",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˌhɑːrd ˈwɜːrkɪŋ/",
+    "meaning": "chăm chỉ, nỗ lực, siêng năng"
+  },
+  {
+    "word": "head",
+    "pos": "noun (danh từ)",
+    "phonetic": "/hed/",
+    "meaning": "cái đầu, phần đầu"
+  },
+  {
+    "word": "heel",
+    "pos": "noun (danh từ)",
+    "phonetic": "/hiːl/",
+    "meaning": "gót chân"
+  },
+  {
+    "word": "helpful",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈhelpfl/",
+    "meaning": "có ích, hay giúp đỡ"
+  },
+  {
+    "word": "kind",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/kaɪnd/",
+    "meaning": "tốt bụng"
+  },
+  {
+    "word": "knee",
+    "pos": "noun (danh từ)",
+    "phonetic": "/niː/",
+    "meaning": "đầu gối"
+  },
+  {
+    "word": "leg",
+    "pos": "noun (danh từ)",
+    "phonetic": "/leɡ/",
+    "meaning": "cái chân"
+  },
+  {
+    "word": "listen to music",
+    "pos": "verb phrase (cụm động từ)",
+    "phonetic": "/ˈlɪsn tə ˈmjuːzɪk/",
+    "meaning": "nghe nhạc"
+  },
+  {
+    "word": "lip",
+    "pos": "noun (danh từ)",
+    "phonetic": "/lɪp/",
+    "meaning": "môi"
+  },
+  {
+    "word": "long",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/lɔːŋ/",
+    "meaning": "(tóc) dài"
+  },
+  {
+    "word": "lovely",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈlʌvli/",
+    "meaning": "đáng yêu"
+  },
+  {
+    "word": "make a cake",
+    "pos": "verb phrase (cụm động từ)",
+    "phonetic": "/meɪk ə keɪk/",
+    "meaning": "làm bánh"
+  },
+  {
+    "word": "make a mistake",
+    "pos": "verb phrase (cụm động từ)",
+    "phonetic": "/meɪk ə mɪˈsteɪk/",
+    "meaning": "mắc lỗi"
+  },
+  {
+    "word": "mouth",
+    "pos": "noun (danh từ)",
+    "phonetic": "/maʊθ/",
+    "meaning": "mồm, miệng"
+  },
+  {
+    "word": "neck",
+    "pos": "noun (danh từ)",
+    "phonetic": "/nek/",
+    "meaning": "cái cổ"
+  },
+  {
+    "word": "nervous",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈnɜːrvəs/",
+    "meaning": "lo lắng, bồn chồn"
+  },
+  {
+    "word": "nose",
+    "pos": "noun (danh từ)",
+    "phonetic": "/nəʊz/",
+    "meaning": "mũi"
+  },
+  {
+    "word": "patient",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈpeɪʃnt/",
+    "meaning": "kiên nhẫn"
+  },
+  {
+    "word": "play the piano",
+    "pos": "verb phrase (cụm động từ)",
+    "phonetic": "/pleɪ ðə piˈænəʊ/",
+    "meaning": "chơi đàn dương cầm"
+  },
+  {
+    "word": "pretty",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈprɪti/",
+    "meaning": "xinh xắn"
+  },
+  {
+    "word": "round",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/raʊnd/",
+    "meaning": "(mặt) tròn"
+  },
+  {
+    "word": "shy",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ʃaɪ/",
+    "meaning": "nhút nhát, hay xấu hổ"
+  },
+  {
+    "word": "shoulder",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈʃəʊldər/",
+    "meaning": "vai"
+  },
+  {
+    "word": "art gallery",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈɑːrt ɡæləri/",
+    "meaning": "phòng trưng bày nghệ thuật"
+  },
+  {
+    "word": "bakery",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈbeɪkəri/",
+    "meaning": "tiệm bánh"
+  },
+  {
+    "word": "beach",
+    "pos": "noun (danh từ)",
+    "phonetic": "/bi:tʃ/",
+    "meaning": "bãi biển"
+  },
+  {
+    "word": "beautiful",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈbjuːtɪfl/",
+    "meaning": "xinh đẹp"
+  },
+  {
+    "word": "boring",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈbɔːrɪŋ/",
+    "meaning": "tẻ nhạt, nhàm chán"
+  },
+  {
+    "word": "busy",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈbɪzi/",
+    "meaning": "bận rộn"
+  },
+  {
+    "word": "bus stop",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈbʌs stɑːp/",
+    "meaning": "điểm dừng xe buýt"
+  },
+  {
+    "word": "café",
+    "pos": "noun (danh từ)",
+    "phonetic": "/kæfˈeɪ/",
+    "meaning": "quán cà phê"
+  },
+  {
+    "word": "caravan",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈkærəvæn/",
+    "meaning": "đoàn du lịch lữ hành"
+  },
+  {
+    "word": "cathedral",
+    "pos": "noun (danh từ)",
+    "phonetic": "/kəˈθiːdrəl/",
+    "meaning": "nhà thờ, giáo đường"
+  },
+  {
+    "word": "cheap",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/tʃiːp/",
+    "meaning": "rẻ"
+  },
+  {
+    "word": "chemist",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈkemɪst/",
+    "meaning": "nhà thuốc"
+  },
+  {
+    "word": "cinema",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈsɪnəmə/",
+    "meaning": "rạp chiếu phim"
+  },
+  {
+    "word": "clean",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/kliːn/",
+    "meaning": "sạch sẽ"
+  },
+  {
+    "word": "convenient",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/kənˈviːniənt/",
+    "meaning": "tiện lợi"
+  },
+  {
+    "word": "countryside",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈkʌntrisaɪd/",
+    "meaning": "vùng nông thôn"
+  },
+  {
+    "word": "crowded",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈkraʊdɪd/",
+    "meaning": "đông đúc"
+  },
+  {
+    "word": "cross the road",
+    "pos": "verb phrase (cụm động từ)",
+    "phonetic": "/krɔːs ðə rəʊd/",
+    "meaning": "sang đường"
+  },
+  {
+    "word": "dangerous",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈdeɪndʒərəs/",
+    "meaning": "nguy hiểm"
+  },
+  {
+    "word": "dirty",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈdɜːrti/",
+    "meaning": "bẩn thỉu"
+  },
+  {
+    "word": "disco",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈdɪskəʊ/",
+    "meaning": "vũ trường"
+  },
+  {
+    "word": "exciting",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ɪkˈsaɪtɪŋ/",
+    "meaning": "thú vị, hấp dẫn"
+  },
+  {
+    "word": "expensive",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ɪkˈspensɪv/",
+    "meaning": "đắt đỏ"
+  },
+  {
+    "word": "fantastic",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/fænˈtæstɪk/",
+    "meaning": "tuyệt vời"
+  },
+  {
+    "word": "faraway",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈfɑːrəweɪ/",
+    "meaning": "xa xôi"
+  },
+  {
+    "word": "fashionable",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈfæʃnəbl/",
+    "meaning": "thời thượng"
+  },
+  {
+    "word": "fresh",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/freʃ/",
+    "meaning": "trong lành"
+  },
+  {
+    "word": "friendly",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈfrendli/",
+    "meaning": "thân thiện"
+  },
+  {
+    "word": "get lost",
+    "pos": "verb phrase (cụm động từ)",
+    "phonetic": "/ɡet lɔːst/",
+    "meaning": "lạc đường"
+  },
+  {
+    "word": "go along",
+    "pos": "verb phrase (cụm động từ)",
+    "phonetic": "/ɡəʊ əˈlɔːŋ/",
+    "meaning": "đi dọc theo"
+  },
+  {
+    "word": "go straight",
+    "pos": "verb phrase (cụm động từ)",
+    "phonetic": "/ɡəʊ streɪt/",
+    "meaning": "đi thẳng"
+  },
+  {
+    "word": "hospital",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈhɑːspɪtl/",
+    "meaning": "bệnh viện"
+  },
+  {
+    "word": "hospitality",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˌhɒspɪˈtæləti/",
+    "meaning": "lòng mến khách"
+  },
+  {
+    "word": "hot",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/hɑ:t/",
+    "meaning": "nóng nực"
+  },
+  {
+    "word": "large",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/lɑːrdʒ/",
+    "meaning": "rộng lớn"
+  },
+  {
+    "word": "modern",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈmɑ:dərn/",
+    "meaning": "hiện đại, đời mới"
+  },
+  {
+    "word": "motorhome",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈməʊtərhəʊm/",
+    "meaning": "nhà lưu động"
+  },
+  {
+    "word": "narrow",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈnærəʊ/",
+    "meaning": "hẹp"
+  },
+  {
+    "word": "noisy",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈnɔɪzi/",
+    "meaning": "ồn ào, huyên náo"
+  },
+  {
+    "word": "pagoda",
+    "pos": "noun (danh từ)",
+    "phonetic": "/pəˈɡəʊdə/",
+    "meaning": "ngôi chùa"
+  },
+  {
+    "word": "park",
+    "pos": "noun (danh từ)",
+    "phonetic": "/pa:rk/",
+    "meaning": "công viên"
+  },
+  {
+    "word": "peaceful",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈpiːsfl/",
+    "meaning": "yên bình"
+  },
+  {
+    "word": "post office",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈpəʊst ɑːfɪs/",
+    "meaning": "bưu điện"
+  },
+  {
+    "word": "quiet",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈkwaɪət/",
+    "meaning": "tĩnh lặng"
+  },
+  {
+    "word": "railway station",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈreɪlweɪ ˈsteɪʃn/",
+    "meaning": "ga đường sắt"
+  },
+  {
+    "word": "restaurant",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈrestərɑːnt/",
+    "meaning": "nhà hàng"
+  },
+  {
+    "word": "square",
+    "pos": "noun (danh từ)",
+    "phonetic": "/skwer/",
+    "meaning": "quảng trường"
+  },
+  {
+    "word": "suburb",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈsʌbɜːrb/",
+    "meaning": "khu vực ngoại ô"
+  },
+  {
+    "word": "supermarket",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈsuːpərmɑːrkɪt/",
+    "meaning": "siêu thị"
+  },
+  {
+    "word": "take the second turning",
+    "pos": "verb phrase (cụm động từ)",
+    "phonetic": "/teɪk ðə ˈsekənd ˈtɜːrnɪŋ/",
+    "meaning": "đi vào lối rẽ thứ hai"
+  },
+  {
+    "word": "temple",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈtempl/",
+    "meaning": "đền, điện, miếu"
+  },
+  {
+    "word": "theatre",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈθiət̮ər/",
+    "meaning": "nhà hát"
+  },
+  {
+    "word": "turn right",
+    "pos": "verb phrase (cụm động từ)",
+    "phonetic": "/tɜːrn raɪt/",
+    "meaning": "rẽ phải"
+  },
+  {
+    "word": "amazing",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/əˈmeɪzɪŋ/",
+    "meaning": "tuyệt vời, đáng kinh ngạc"
+  },
+  {
+    "word": "backpack",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈbækpæk/",
+    "meaning": "túi đeo sau lưng"
+  },
+  {
+    "word": "beehive",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈbiːhaɪv/",
+    "meaning": "tổ ong"
+  },
+  {
+    "word": "canyon",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈkæn.jən/",
+    "meaning": "hẻm núi"
+  },
+  {
+    "word": "cave",
+    "pos": "noun (danh từ)",
+    "phonetic": "/keɪv/",
+    "meaning": "hang động"
+  },
+  {
+    "word": "charming",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈtʃɑːrmɪŋ/",
+    "meaning": "quyến rũ"
+  },
+  {
+    "word": "cliff",
+    "pos": "noun (danh từ)",
+    "phonetic": "/klɪf/",
+    "meaning": "vách đá"
+  },
+  {
+    "word": "cluster",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈklʌstər/",
+    "meaning": "nhóm, đám, bó, đàn, bầy"
+  },
+  {
+    "word": "compass",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈkʌmpəs/",
+    "meaning": "la bàn"
+  },
+  {
+    "word": "desert",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈdezərt/",
+    "meaning": "sa mạc"
+  },
+  {
+    "word": "eco-tourist",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈiːkəʊtʊrɪst/",
+    "meaning": "khách du lịch sinh thái"
+  },
+  {
+    "word": "forest",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈfɔːrɪst/",
+    "meaning": "khu rừng"
+  },
+  {
+    "word": "item",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈaɪtəm/",
+    "meaning": "món đồ"
+  },
+  {
+    "word": "island",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈaɪlənd/",
+    "meaning": "hòn đảo"
+  },
+  {
+    "word": "jungle",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈdʒʌŋɡl/",
+    "meaning": "rừng nhiệt đới"
+  },
+  {
+    "word": "landscape",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈlændskeɪp/",
+    "meaning": "cảnh quan"
+  },
+  {
+    "word": "limestone",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈlaɪmstəʊn/",
+    "meaning": "đá vôi"
+  },
+  {
+    "word": "litter",
+    "pos": "noun (danh từ), verb (động từ)",
+    "phonetic": "/ˈlɪtər/",
+    "meaning": "rác"
+  },
+  {
+    "word": "man-made",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˌmæn ˈmeɪd/",
+    "meaning": "nhân tạo"
+  },
+  {
+    "word": "mountain",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈmaʊntn/",
+    "meaning": "ngọn núi"
+  },
+  {
+    "word": "mountain range",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈmaʊn.tən ˌreɪndʒ/",
+    "meaning": "dãy núi"
+  },
+  {
+    "word": "natural wonder",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈnætʃrəl ˈwʌndər/",
+    "meaning": "kỳ quan thiên nhiên"
+  },
+  {
+    "word": "plaster",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈplæstər/",
+    "meaning": "thạch cao"
+  },
+  {
+    "word": "popular",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈpɒpjələ(r)/",
+    "meaning": "nổi tiếng, phổ biến"
+  },
+  {
+    "word": "rainy",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈreɪni/",
+    "meaning": "mưa nhiều"
+  },
+  {
+    "word": "river",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈrɪvər/",
+    "meaning": "con sông"
+  },
+  {
+    "word": "rock column",
+    "pos": "noun (danh từ)",
+    "phonetic": "/rɑːk ˈkɑːləm/",
+    "meaning": "cột đá"
+  },
+  {
+    "word": "scissors",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈsɪzərz/",
+    "meaning": "cái kéo"
+  },
+  {
+    "word": "scenery",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈsiːnəri/",
+    "meaning": "phong cảnh"
+  },
+  {
+    "word": "sleeping bag",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈsliːpɪŋ bæɡ/",
+    "meaning": "túi ngủ"
+  },
+  {
+    "word": "slope",
+    "pos": "noun (danh từ)",
+    "phonetic": "/sləʊp/",
+    "meaning": "con dốc"
+  },
+  {
+    "word": "spectacular",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/spekˈtækjələ(r)/",
+    "meaning": "ngoạn mục, hùng vĩ"
+  },
+  {
+    "word": "sun cream",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈsʌn kriːm/",
+    "meaning": "kem chống nắng"
+  },
+  {
+    "word": "thread",
+    "pos": "noun (danh từ)",
+    "phonetic": "/θred/",
+    "meaning": "sợi chỉ"
+  },
+  {
+    "word": "tourist",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈtuːrɪst/",
+    "meaning": "du khách"
+  },
+  {
+    "word": "umbrella",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ʌmˈbrelə/",
+    "meaning": "cái ô, dù"
+  },
+  {
+    "word": "waterfall",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈwɔːtərfɔːl/",
+    "meaning": "thác nước"
+  },
+  {
+    "word": "waterproof coat",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈwɔːtərpruːf kəʊt/",
+    "meaning": "áo mưa, áo chống nước"
+  },
+  {
+    "word": "apricot blossom",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈeɪ.prɪ.kɑːt ˈblɑs·əm/",
+    "meaning": "hoa mai"
+  },
+  {
+    "word": "balloon",
+    "pos": "noun (danh từ)",
+    "phonetic": "/bəˈluːn/",
+    "meaning": "bóng bay"
+  },
+  {
+    "word": "behave well",
+    "pos": "verb phrase (cụm động từ)",
+    "phonetic": "/bɪˈheɪv wel/",
+    "meaning": "cư xử ngoan ngoãn"
+  },
+  {
+    "word": "break",
+    "pos": "verb (động từ)",
+    "phonetic": "/breɪk/",
+    "meaning": "làm vỡ"
+  },
+  {
+    "word": "buy salt",
+    "pos": "verb phrase (cụm động từ)",
+    "phonetic": "/baɪ sɔ:lt/",
+    "meaning": "mua muối"
+  },
+  {
+    "word": "celebrate",
+    "pos": "verb (động từ)",
+    "phonetic": "/ˈselɪbreɪt/",
+    "meaning": "kỷ niệm, chúc mừng"
+  },
+  {
+    "word": "cheer",
+    "pos": "verb (động từ)",
+    "phonetic": "/tʃɪr/",
+    "meaning": "hoan hô, cổ vũ"
+  },
+  {
+    "word": "decorate",
+    "pos": "verb (động từ)",
+    "phonetic": "/ˈdekəreɪt/",
+    "meaning": "trang trí"
+  },
+  {
+    "word": "family gathering",
+    "pos": "phrase",
+    "phonetic": "/ˈfæməli ˈɡæðərɪŋ/",
+    "meaning": "buổi gặp mặt gia đình"
+  },
+  {
+    "word": "firework",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈfaɪəwɜːk/",
+    "meaning": "pháo hoa"
+  },
+  {
+    "word": "first footer",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˌfɜːrst ˈfʊtər/",
+    "meaning": "người xông đất"
+  },
+  {
+    "word": "flower market",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈflaʊər ˈmɑːrkɪt/",
+    "meaning": "chợ hoa"
+  },
+  {
+    "word": "human chess",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈhjuːmən tʃes/",
+    "meaning": "trò cờ người"
+  },
+  {
+    "word": "lucky money",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈlʌki ˈmʌni/",
+    "meaning": "tiền mừng tuổi"
+  },
+  {
+    "word": "make a wish",
+    "pos": "verb phrase (cụm động từ)",
+    "phonetic": "/meɪk ə wɪʃ/",
+    "meaning": "mong ước"
+  },
+  {
+    "word": "midnight kiss",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈmɪdnaɪt kɪs/",
+    "meaning": "nụ hôn lúc nửa đêm"
+  },
+  {
+    "word": "New Year’s Eve",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˌnjuː jɪəz ˈiːv/",
+    "meaning": "đêm giao thừa"
+  },
+  {
+    "word": "peach flower",
+    "pos": "noun (danh từ)",
+    "phonetic": "/piːtʃ ˈflaʊər/",
+    "meaning": "hoa đào"
+  },
+  {
+    "word": "visit relatives",
+    "pos": "verb phrase (cụm động từ)",
+    "phonetic": "/ˈvɪzɪt ˈrelətɪvz/",
+    "meaning": "thăm họ hàng"
+  },
+  {
+    "word": "animated film",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈænɪmeɪtɪd fɪlm/",
+    "meaning": "phim hoạt hình"
+  },
+  {
+    "word": "audience",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈɔːdiəns/",
+    "meaning": "khán thính giả"
+  },
+  {
+    "word": "cameraman",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈkæmrəmæn/",
+    "meaning": "người quay phim"
+  },
+  {
+    "word": "cartoon",
+    "pos": "noun (danh từ)",
+    "phonetic": "/kɑːrˈtuːn/",
+    "meaning": "hoạt hình, truyện tranh"
+  },
+  {
+    "word": "channel",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈtʃænl/",
+    "meaning": "kênh (truyền hình)"
+  },
+  {
+    "word": "comedy",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈkɑːmədi/",
+    "meaning": "hài kịch"
+  },
+  {
+    "word": "documentary",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˌdɑːkjuˈmentri/",
+    "meaning": "phim tài liệu"
+  },
+  {
+    "word": "drama",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈdrɑːmə/",
+    "meaning": "kịch, phim nhiều tập, phim bộ"
+  },
+  {
+    "word": "educational",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˌedʒuˈkeɪʃənl/",
+    "meaning": "có tính giáo dục"
+  },
+  {
+    "word": "entertaining",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˌentəˈteɪnɪŋ/",
+    "meaning": "có tính giải trí"
+  },
+  {
+    "word": "film industry",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/fɪlm ˈɪndəstri/",
+    "meaning": "ngành công nghiệp điện ảnh"
+  },
+  {
+    "word": "game show",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈɡeɪm ʃəʊ/",
+    "meaning": "trò chơi truyền hình"
+  },
+  {
+    "word": "good side",
+    "pos": "noun (danh từ)",
+    "phonetic": "ɡʊd saɪd",
+    "meaning": "điểm tốt, khía cạnh tốt"
+  },
+  {
+    "word": "live",
+    "pos": "adjective (tính từ), adverb (động từ)",
+    "phonetic": "/laɪv/",
+    "meaning": "được phát sóng trực tiếp"
+  },
+  {
+    "word": "news",
+    "pos": "noun (danh từ)",
+    "phonetic": "/nuːz/",
+    "meaning": "tin tức, chương trình thời sự"
+  },
+  {
+    "word": "popular",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈpɒpjələ(r)/",
+    "meaning": "nổi tiếng, được yêu thích"
+  },
+  {
+    "word": "producer",
+    "pos": "noun (danh từ)",
+    "phonetic": "/prəˈduːsər/",
+    "meaning": "nhà sản xuất"
+  },
+  {
+    "word": "programme",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈprəʊɡræm/",
+    "meaning": "chương trình"
+  },
+  {
+    "word": "reality show",
+    "pos": "noun (danh từ)",
+    "phonetic": "/riˈæləti ʃəʊ/",
+    "meaning": "chương trình thực tế"
+  },
+  {
+    "word": "reporter",
+    "pos": "noun (danh từ)",
+    "phonetic": "/rɪˈpɔːrtər/",
+    "meaning": "phóng viên"
+  },
+  {
+    "word": "soap opera",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈsoʊp ˌɑː.pɚ.ə/",
+    "meaning": "phim truyền hình dài tập, nhiều kỳ"
+  },
+  {
+    "word": "studio",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈstuːdiəʊ/",
+    "meaning": "phòng thu âm, phòng thu hình, trường quay phim"
+  },
+  {
+    "word": "talent show",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈtælənt ʃəʊ/",
+    "meaning": "chương trình tìm kiếm tài năng"
+  },
+  {
+    "word": "TV guide",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˌtiː ˈviː ɡaɪd/",
+    "meaning": "lịch phát sóng, bản hướng dẫn xem TV"
+  },
+  {
+    "word": "TV series",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˌtiː ˈviː ˈsɪəriːz/",
+    "meaning": "chương trình truyền hình"
+  },
+  {
+    "word": "viewer",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈvjuːər/",
+    "meaning": "người xem"
+  },
+  {
+    "word": "weather forecast",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈweðər fɔːrkæst/",
+    "meaning": "dự báo thời tiết"
+  },
+  {
+    "word": "wildlife",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈwaɪldlaɪf/",
+    "meaning": "sinh vật hoang dã"
+  },
+  {
+    "word": "aerobics",
+    "pos": "noun (danh từ)",
+    "phonetic": "eˈrəʊbɪks",
+    "meaning": "thể dục nhịp điệu"
+  },
+  {
+    "word": "athletic shoe",
+    "pos": "noun (danh từ)",
+    "phonetic": "æθˈletɪk ʃuː",
+    "meaning": "giày thể thao"
+  },
+  {
+    "word": "badminton",
+    "pos": "noun (danh từ)",
+    "phonetic": "ˈbædmɪntən",
+    "meaning": "cầu lông"
+  },
+  {
+    "word": "ball",
+    "pos": "noun (danh từ)",
+    "phonetic": "bɔːl",
+    "meaning": "quả bóng"
+  },
+  {
+    "word": "baseball",
+    "pos": "noun (danh từ)",
+    "phonetic": "ˈbeɪsbɔːl",
+    "meaning": "bóng chày"
+  },
+  {
+    "word": "beat",
+    "pos": "verb (động từ)",
+    "phonetic": "biːt",
+    "meaning": "đánh bại"
+  },
+  {
+    "word": "blind man’s bluff",
+    "pos": "noun (danh từ)",
+    "phonetic": "ˌblaɪnd.mænz ˈbʌf",
+    "meaning": "trò bịt mắt bắt dê"
+  },
+  {
+    "word": "boat",
+    "pos": "noun (danh từ)",
+    "phonetic": "bəʊt",
+    "meaning": "thuyền, tàu"
+  },
+  {
+    "word": "champion",
+    "pos": "noun (danh từ)",
+    "phonetic": "ˈtʃæmpiən",
+    "meaning": "nhà vô địch"
+  },
+  {
+    "word": "championship",
+    "pos": "noun (danh từ)",
+    "phonetic": "ˈtʃæmpiənʃɪp",
+    "meaning": "giải vô địch"
+  },
+  {
+    "word": "cheese rolling",
+    "pos": "noun (danh từ)",
+    "phonetic": "tʃiːz ˈrəʊlɪŋ",
+    "meaning": "trò vồ phô mai"
+  },
+  {
+    "word": "chess",
+    "pos": "noun (danh từ)",
+    "phonetic": "tʃes",
+    "meaning": "cờ vua"
+  },
+  {
+    "word": "competitive",
+    "pos": "adjective (tính từ)",
+    "phonetic": "kəmˈpetətɪv",
+    "meaning": "tính cạnh tranh, hiếu thắng"
+  },
+  {
+    "word": "competition",
+    "pos": "noun (danh từ)",
+    "phonetic": "ˌkɑːmpəˈtɪʃn",
+    "meaning": "cuộc thi đấu"
+  },
+  {
+    "word": "contest",
+    "pos": "noun (danh từ)",
+    "phonetic": "ˈkɑːntest",
+    "meaning": "cuộc thi"
+  },
+  {
+    "word": "cycling",
+    "pos": "noun (danh từ)",
+    "phonetic": "ˈsaɪklɪŋ",
+    "meaning": "hoạt động đạp xe"
+  },
+  {
+    "word": "equipment",
+    "pos": "noun (danh từ)",
+    "phonetic": "ɪˈkwɪpmənt",
+    "meaning": "dụng cụ, trang thiết bị"
+  },
+  {
+    "word": "fit",
+    "pos": "adjective (tính từ)",
+    "phonetic": "fɪt",
+    "meaning": "vừa vặn"
+  },
+  {
+    "word": "football",
+    "pos": "noun (danh từ)",
+    "phonetic": "ˈfʊtbɔːl",
+    "meaning": "bóng đá, bóng bầu dục (Mỹ)"
+  },
+  {
+    "word": "goggles",
+    "pos": "noun (danh từ)",
+    "phonetic": "ˈɡɑːɡlz",
+    "meaning": "kính bảo hộ, kính bơi"
+  },
+  {
+    "word": "gym",
+    "pos": "noun (danh từ)",
+    "phonetic": "dʒɪm",
+    "meaning": "phòng tập thể hình"
+  },
+  {
+    "word": "horse riding",
+    "pos": "noun (danh từ)",
+    "phonetic": "ˈhɔːrs raɪdɪŋ",
+    "meaning": "môn cưỡi ngựa"
+  },
+  {
+    "word": "individual sport",
+    "pos": "noun (danh từ)",
+    "phonetic": "ˌɪn.dəˈvɪdʒ.u.əl spɔːrt",
+    "meaning": "môn thể thao cá nhân"
+  },
+  {
+    "word": "karate",
+    "pos": "noun (danh từ)",
+    "phonetic": "kəˈrɑːti",
+    "meaning": "võ karate"
+  },
+  {
+    "word": "marathon",
+    "pos": "noun (danh từ)",
+    "phonetic": "ˈmærəθən",
+    "meaning": "chạy bộ đường trường"
+  },
+  {
+    "word": "match",
+    "pos": "noun (danh từ)",
+    "phonetic": "mætʃ",
+    "meaning": "cuộc thi đấu, trận đấu"
+  },
+  {
+    "word": "motor racing",
+    "pos": "noun (danh từ)",
+    "phonetic": "ˈməʊtər reɪsɪŋ",
+    "meaning": "cuộc đua ô tô"
+  },
+  {
+    "word": "prize",
+    "pos": "noun (danh từ)",
+    "phonetic": "praɪz",
+    "meaning": "giải thưởng, phần thưởng"
+  },
+  {
+    "word": "racket",
+    "pos": "noun (danh từ)",
+    "phonetic": "ˈrækɪt",
+    "meaning": "cái vợt có lưới (để chơi đánh bóng)"
+  },
+  {
+    "word": "skiing",
+    "pos": "noun (danh từ)",
+    "phonetic": "ˈskiːɪŋ",
+    "meaning": "môn trượt tuyết"
+  },
+  {
+    "word": "skipping",
+    "pos": "noun (danh từ)",
+    "phonetic": "ˈskɪpɪŋ",
+    "meaning": "trò nhảy dây"
+  },
+  {
+    "word": "spare time",
+    "pos": "noun (danh từ)",
+    "phonetic": "ˈspeər ˈtɑɪm",
+    "meaning": "thời gian rảnh"
+  },
+  {
+    "word": "sportsman",
+    "pos": "noun (danh từ)",
+    "phonetic": "ˈspɔːrtsmən",
+    "meaning": "người ham mê thể thao"
+  },
+  {
+    "word": "sportswoman",
+    "pos": "noun (danh từ)",
+    "phonetic": "ˈspɔːrtswʊmən",
+    "meaning": "người ham mê thể thao"
+  },
+  {
+    "word": "swimming",
+    "pos": "noun (danh từ)",
+    "phonetic": "ˈswɪmɪŋ",
+    "meaning": "môn bơi"
+  },
+  {
+    "word": "table tennis",
+    "pos": "noun (danh từ)",
+    "phonetic": "ˈteɪbl tenɪs",
+    "meaning": "bóng bàn"
+  },
+  {
+    "word": "team sport",
+    "pos": "phrase",
+    "phonetic": "tiːm spɔːrt",
+    "meaning": "môn thể thao đồng đội"
+  },
+  {
+    "word": "tennis",
+    "pos": "noun (danh từ)",
+    "phonetic": "ˈtenɪs",
+    "meaning": "quần vợt"
+  },
+  {
+    "word": "the Olympic Games",
+    "pos": "noun (danh từ)",
+    "phonetic": "oʊˌlɪm.pɪk ˈɡeɪmz",
+    "meaning": "Thế vận hội"
+  },
+  {
+    "word": "tug of war",
+    "pos": "noun (danh từ)",
+    "phonetic": "ˌtʌɡ əv ˈwɔːr",
+    "meaning": "trò kéo co"
+  },
+  {
+    "word": "volleyball",
+    "pos": "noun (danh từ)",
+    "phonetic": "ˈvɑːlibɔːl",
+    "meaning": "bóng chuyền"
+  },
+  {
+    "word": "wrestling",
+    "pos": "noun (danh từ)",
+    "phonetic": "ˈreslɪŋ",
+    "meaning": "trò đấu vật"
+  },
+  {
+    "word": "ancient",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈeɪnʃənt/",
+    "meaning": "cổ đại"
+  },
+  {
+    "word": "atmosphere",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈætməsfɪə(r)/",
+    "meaning": "bầu không khí"
+  },
+  {
+    "word": "Big Ben",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˌbɪɡ ˈben/",
+    "meaning": "tháp đồng hồ Big Ben"
+  },
+  {
+    "word": "building",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈbɪldɪŋ/",
+    "meaning": "tòa nhà"
+  },
+  {
+    "word": "coast",
+    "pos": "noun (danh từ)",
+    "phonetic": "/kəʊst/",
+    "meaning": "bờ biển"
+  },
+  {
+    "word": "double-decker bus",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˌdʌbl ˈdekər bʌs/",
+    "meaning": "xe buýt hai tầng"
+  },
+  {
+    "word": "Eiffel Tower",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˌaɪ.fəl ˈtaʊ.ɚ/",
+    "meaning": "tháp Ép-phen"
+  },
+  {
+    "word": "festival",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈfestɪvl/",
+    "meaning": "lễ hội"
+  },
+  {
+    "word": "floating market",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈfləʊtɪŋ ˈmɑːrkɪt/",
+    "meaning": "chợ nổi"
+  },
+  {
+    "word": "helmet",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈhelmɪt/",
+    "meaning": "mũ bảo hiểm"
+  },
+  {
+    "word": "hop-on hop-off bus",
+    "pos": "noun (danh từ)",
+    "phonetic": "/hɑːp ɑːn hɑːp ɑːf bʌs/",
+    "meaning": "xe buýt tham quan"
+  },
+  {
+    "word": "landmark",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈlændmɑːk/",
+    "meaning": "danh lam thắng cảnh, di tích"
+  },
+  {
+    "word": "landscape",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈlændskeɪp/",
+    "meaning": "phong cảnh, khung cảnh"
+  },
+  {
+    "word": "Merilon statue",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈmɜːˌlaɪən ˈstætʃuː/",
+    "meaning": "tượng sư tử biển"
+  },
+  {
+    "word": "national park",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˌnæʃnəl ˈpɑːrk/",
+    "meaning": "vườn quốc gia, công viên quốc gia"
+  },
+  {
+    "word": "night market",
+    "pos": "noun (danh từ)",
+    "phonetic": "/naɪt ˈmɑːrkɪt/",
+    "meaning": "chợ đêm"
+  },
+  {
+    "word": "pagoda",
+    "pos": "noun (danh từ)",
+    "phonetic": "/pəˈɡəʊdə/",
+    "meaning": "ngôi chùa"
+  },
+  {
+    "word": "palace",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈpæləs/",
+    "meaning": "cung điện"
+  },
+  {
+    "word": "postcard",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈpəʊstkɑːrd/",
+    "meaning": "bưu thiếp"
+  },
+  {
+    "word": "recreational park",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˌrekriˈeɪʃənl pa:rk/",
+    "meaning": "công viên giải trí"
+  },
+  {
+    "word": "riverbank",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈrɪvəˌbæŋk/",
+    "meaning": "bờ sông"
+  },
+  {
+    "word": "souvenir",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˌsuː.vəˈnɪr/",
+    "meaning": "đồ lưu niệm"
+  },
+  {
+    "word": "stall",
+    "pos": "noun (danh từ)",
+    "phonetic": "/stɔːl/",
+    "meaning": "quầy hàng, gian hàng"
+  },
+  {
+    "word": "statue",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈstætʃuː/",
+    "meaning": "bức tượng"
+  },
+  {
+    "word": "street food",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈstriːt ˌfuːd/",
+    "meaning": "đồ ăn đường phố"
+  },
+  {
+    "word": "Times Square",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˌtaɪmz ˈskwer/",
+    "meaning": "Quảng trường Thời Đại"
+  },
+  {
+    "word": "tower",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈtaʊər/",
+    "meaning": "tòa tháp"
+  },
+  {
+    "word": "appliance",
+    "pos": "noun (danh từ)",
+    "phonetic": "/əˈplaɪəns/",
+    "meaning": "dụng cụ, đồ dùng"
+  },
+  {
+    "word": "automatic",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˌɔːtəˈmætɪk/",
+    "meaning": "tự động"
+  },
+  {
+    "word": "brick house",
+    "pos": "noun (danh từ)",
+    "phonetic": "/brɪk haʊs/",
+    "meaning": "nhà gạch"
+  },
+  {
+    "word": "cottage",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈkɒtɪdʒ/",
+    "meaning": "nhà tranh"
+  },
+  {
+    "word": "electric cooker",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ɪˈlektrɪk ˈkʊkər/",
+    "meaning": "đồ nấu bằng điện"
+  },
+  {
+    "word": "hi-tech",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˌhaɪ ˈtek/",
+    "meaning": "công nghệ cao"
+  },
+  {
+    "word": "heater",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈhiːtər/",
+    "meaning": "máy sưởi"
+  },
+  {
+    "word": "helicopter",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈhelɪkɑːptər/",
+    "meaning": "máy bay trực thăng"
+  },
+  {
+    "word": "housework",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈhaʊswɜːrk/",
+    "meaning": "việc nhà"
+  },
+  {
+    "word": "iron",
+    "pos": "verb (động từ)",
+    "phonetic": "/ˈaɪərn/",
+    "meaning": "là lượt"
+  },
+  {
+    "word": "look after",
+    "pos": "verb phrase (cụm động từ)",
+    "phonetic": "/lʊk ˈæf tər/",
+    "meaning": "chăm sóc, lo lắng"
+  },
+  {
+    "word": "planet",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈplænɪt/",
+    "meaning": "hành tinh"
+  },
+  {
+    "word": "remote control unit",
+    "pos": "noun (danh từ)",
+    "phonetic": "/rɪˈməʊt kənˈtrəʊl ˈjuːnɪt/",
+    "meaning": "bộ điều khiển điện tử"
+  },
+  {
+    "word": "skyscraper",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈskaɪskreɪpə(r)/",
+    "meaning": "nhà cao tầng, nhà chọc trời"
+  },
+  {
+    "word": "smart clock",
+    "pos": "noun (danh từ)",
+    "phonetic": "/smɑːrt klɒk/",
+    "meaning": "đồng hồ thông minh"
+  },
+  {
+    "word": "smartphone",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈsmɑːrtfəʊn/",
+    "meaning": "điện thoại thông minh"
+  },
+  {
+    "word": "solar energy",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˌsəʊlər ˈenərdʒi/",
+    "meaning": "năng lượng mặt trời"
+  },
+  {
+    "word": "surf the Internet",
+    "pos": "verb phrase (cụm động từ)",
+    "phonetic": "/sɜːrf ðiː ˈɪntərnet/",
+    "meaning": "lướt mạng Internet"
+  },
+  {
+    "word": "UFO",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈjuːfəʊ/",
+    "meaning": "vật thể bay chưa xác định, đĩa bay"
+  },
+  {
+    "word": "washing machine",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈwɑːʃɪŋ məʃiːn/",
+    "meaning": "máy giặt"
+  },
+  {
+    "word": "wireless TV",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈwaɪərləs ˌtiː ˈviː/",
+    "meaning": "ti vi không dây"
+  },
+  {
+    "word": "borrow",
+    "pos": "verb (động từ)",
+    "phonetic": "/ˈbɔːrəʊ/",
+    "meaning": "vay, mượn"
+  },
+  {
+    "word": "charity",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈtʃærəti/",
+    "meaning": "tổ chức từ thiện"
+  },
+  {
+    "word": "check-out",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈtʃek.aʊt/",
+    "meaning": "điểm thanh toán, trả phòng"
+  },
+  {
+    "word": "coal",
+    "pos": "noun (danh từ)",
+    "phonetic": "/kəʊl/",
+    "meaning": "than đá"
+  },
+  {
+    "word": "cut down",
+    "pos": "verb phrase (cụm động từ)",
+    "phonetic": "/kʌt daʊn/",
+    "meaning": "giảm thiểu"
+  },
+  {
+    "word": "dusty",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈdʌsti/",
+    "meaning": "phủ bụi"
+  },
+  {
+    "word": "environment",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ɪnˈvaɪrənmənt/",
+    "meaning": "môi trường"
+  },
+  {
+    "word": "exchange",
+    "pos": "verb (động từ)",
+    "phonetic": "/ɪksˈtʃeɪndʒ/",
+    "meaning": "trao đổi"
+  },
+  {
+    "word": "fair",
+    "pos": "noun (danh từ)",
+    "phonetic": "/fer/",
+    "meaning": "hội chợ"
+  },
+  {
+    "word": "fume",
+    "pos": "verb (động từ)",
+    "phonetic": "/fjuːm/",
+    "meaning": "nhả khói"
+  },
+  {
+    "word": "glass",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ɡlæs/",
+    "meaning": "thủy tinh"
+  },
+  {
+    "word": "instead of",
+    "pos": "preposition",
+    "phonetic": "/ɪnˈsted əv/",
+    "meaning": "thay vì"
+  },
+  {
+    "word": "material",
+    "pos": "noun (danh từ)",
+    "phonetic": "/məˈtɪriəl/",
+    "meaning": "nguyên liệu, vật liệu"
+  },
+  {
+    "word": "polluted",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/pəˈluːtid/",
+    "meaning": "ô nhiễm"
+  },
+  {
+    "word": "president",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈprezɪdənt/",
+    "meaning": "chủ tịch"
+  },
+  {
+    "word": "produce",
+    "pos": "verb (động từ)",
+    "phonetic": "/prəˈduːs/",
+    "meaning": "tạo ra"
+  },
+  {
+    "word": "reduce",
+    "pos": "verb (động từ)",
+    "phonetic": "/rɪˈdjuːs/",
+    "meaning": "giảm bớt"
+  },
+  {
+    "word": "reuse",
+    "pos": "verb (động từ)",
+    "phonetic": "/ˌriːˈjuːs/",
+    "meaning": "tái sử dụng"
+  },
+  {
+    "word": "recycle",
+    "pos": "verb (động từ)",
+    "phonetic": "/ˌriːˈsaɪkl/",
+    "meaning": "tái chế"
+  },
+  {
+    "word": "recycle bin",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˌriːˈsaɪkl bɪn/",
+    "meaning": "thùng rác tái chế"
+  },
+  {
+    "word": "rhythm",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈrɪðəm/",
+    "meaning": "nhịp điệu"
+  },
+  {
+    "word": "rubbish",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈrʌbɪʃ/",
+    "meaning": "rác, vật vô giá trị"
+  },
+  {
+    "word": "smoke",
+    "pos": "noun (danh từ), verb (động từ)",
+    "phonetic": "/sməʊk/",
+    "meaning": "khói, bốc khói"
+  },
+  {
+    "word": "stand by",
+    "pos": "verb phrase (cụm động từ)",
+    "phonetic": "/ɑːn ˈstændbaɪ/",
+    "meaning": "dự trữ"
+  },
+  {
+    "word": "tip",
+    "pos": "noun (danh từ)",
+    "phonetic": "/tɪp/",
+    "meaning": "mẹo, mánh khóe"
+  },
+  {
+    "word": "throw away",
+    "pos": "verb phrase (cụm động từ)",
+    "phonetic": "/θrəʊ əˈweɪ/",
+    "meaning": "vứt bỏ"
+  },
+  {
+    "word": "turn off",
+    "pos": "verb phrase (cụm động từ)",
+    "phonetic": "/tɜːrn ɔːf/",
+    "meaning": "tắt đi"
+  },
+  {
+    "word": "age",
+    "pos": "noun (danh từ)",
+    "phonetic": "/eɪdʒ/",
+    "meaning": "tuổi"
+  },
+  {
+    "word": "choice",
+    "pos": "noun (danh từ)",
+    "phonetic": "/tʃɔɪs/",
+    "meaning": "lựa chọn, sự lựa chọn"
+  },
+  {
+    "word": "complicated",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈkɑːmplɪkeɪtɪd/",
+    "meaning": "phức tạp, rắc rối"
+  },
+  {
+    "word": "dangerous",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈdeɪndʒərəs/",
+    "meaning": "nguy hiểm, nguy cấp"
+  },
+  {
+    "word": "design",
+    "pos": "noun (danh từ), verb (động từ)",
+    "phonetic": "/dɪˈzaɪn/",
+    "meaning": "bản thiết kế, thiết kế"
+  },
+  {
+    "word": "do the dishes",
+    "pos": "verb phrase (cụm động từ)",
+    "phonetic": "/duː ðə ˈdɪʃɪz/",
+    "meaning": "rửa bát"
+  },
+  {
+    "word": "emotion",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ɪˈməʊʃn/",
+    "meaning": "cảm xúc"
+  },
+  {
+    "word": "feeling",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈfiːlɪŋ/",
+    "meaning": "cảm giác, cảm xúc"
+  },
+  {
+    "word": "gardening",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈɡɑːrdnɪŋ/",
+    "meaning": "nghề làm vườn, công việc làm vườn"
+  },
+  {
+    "word": "guard",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ɡɑːrd/",
+    "meaning": "người canh gác, bảo vệ"
+  },
+  {
+    "word": "human",
+    "pos": "adjective (tính từ), noun (danh từ)",
+    "phonetic": "/ˈhjuːmən/",
+    "meaning": "con người"
+  },
+  {
+    "word": "household chores",
+    "pos": "phrase",
+    "phonetic": "/ˈhaʊsˌhəʊld tʃɔːz/",
+    "meaning": "việc vặt trong nhà"
+  },
+  {
+    "word": "interact",
+    "pos": "verb (động từ)",
+    "phonetic": "/ˌɪntərˈækt/",
+    "meaning": "tương tác"
+  },
+  {
+    "word": "language",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈlæŋɡwɪdʒ/",
+    "meaning": "ngôn ngữ"
+  },
+  {
+    "word": "lazy",
+    "pos": "adjective (tính từ)",
+    "phonetic": "/ˈleɪzi/",
+    "meaning": "lười biếng"
+  },
+  {
+    "word": "make a meal",
+    "pos": "verb phrase (cụm động từ)",
+    "phonetic": "/meɪk ə miːl/",
+    "meaning": "nấu ăn, làm một bữa ăn"
+  },
+  {
+    "word": "price",
+    "pos": "noun (danh từ)",
+    "phonetic": "/praɪs/",
+    "meaning": "giá cả"
+  },
+  {
+    "word": "repair",
+    "pos": "verb (động từ)",
+    "phonetic": "/rɪˈper/",
+    "meaning": "sửa chữa"
+  },
+  {
+    "word": "robot",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈrəʊbɑːt/",
+    "meaning": "người máy"
+  },
+  {
+    "word": "security",
+    "pos": "noun (danh từ)",
+    "phonetic": "/sɪˈkjʊrəti/",
+    "meaning": "sự an toàn, an ninh, bảo mật"
+  },
+  {
+    "word": "signal",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈsɪɡnəl/",
+    "meaning": "dấu hiệu, tín hiệu, hiệu lệnh"
+  },
+  {
+    "word": "social issue",
+    "pos": "phrase",
+    "phonetic": "/ˈsəʊʃl ˈɪʃuː/",
+    "meaning": "vấn đề xã hội"
+  },
+  {
+    "word": "space station",
+    "pos": "noun (danh từ)",
+    "phonetic": "/ˈspā(s) ˌstāSHən/",
+    "meaning": "trạm vũ trụ"
+  },
+  {
+    "word": "travel",
+    "pos": "verb (động từ)",
+    "phonetic": "/ˈtrævl/",
+    "meaning": "du lịch, di chuyển"
+  }
+]
