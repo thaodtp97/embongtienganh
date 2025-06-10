@@ -65,9 +65,7 @@ header {
 #end-session-btn:hover { background:#d84315; }
 
 #history-container { margin-top:1.5rem; }
-#history-table {
-  width:100%; border-collapse:collapse;
-}
+#history-table { width:100%; border-collapse:collapse; }
 #history-table th, #history-table td {
   padding:0.5rem; border:1px solid #ddd; text-align:center;
 }
