@@ -17,7 +17,10 @@ function initSRS() {
   if (stored) srsData = JSON.parse(stored);
   else {
     srsData = data.map(item => ({
-      ...item,
+      word: item.word,
+      pos: item.pos,
+      phonetic: item.phonetic,
+      meaning: item.meaning,
       rep: 0,
       interval: 1,
       ease: 2.5,
@@ -103,22 +106,21 @@ function showQuestion() {
 function selectAnswer(btn, item) {
   document.querySelectorAll('.option-btn').forEach(b=>b.disabled=true);
   const cur = sessionWords[currentIdx];
-  const correct = item.word===cur.word;
-  if (correct) correctCount++;
+  const ok  = item.word === cur.word;
+  if (ok) correctCount++;
   else {
     btn.classList.add('wrong');
     wrongWords.push(cur.word);
   }
-
-  if (!correct) {
+  if (!ok) {
     document.querySelectorAll('.option-btn').forEach(b=>{
       if (b.innerText.includes(cur.word)) b.classList.add('correct');
     });
   } else btn.classList.add('correct');
 
-  // update SRS
+  // SRS update
   const s = srsData.find(i=>i.word===cur.word);
-  if (correct) {
+  if (ok) {
     s.rep++;
     s.interval = s.rep===1?1:(s.rep===2?6:Math.ceil(s.interval*s.ease));
     s.nextReview = new Date(Date.now()+s.interval*24*3600*1000).toISOString();
@@ -147,25 +149,32 @@ document.getElementById('end-session-btn').onclick = endSession;
 
 function endSession() {
   const today = new Date().toISOString().slice(0,10);
-  if (lastSessionDate===new Date(Date.now()-24*3600*1000).toISOString().slice(0,10))
+  if (lastSessionDate === new Date(Date.now()-24*3600*1000).toISOString().slice(0,10))
     streakCount++;
-  else if (lastSessionDate!==today)
+  else if (lastSessionDate !== today)
     streakCount = 1;
   lastSessionDate = today;
   localStorage.setItem(user + '_streak', streakCount);
   localStorage.setItem(user + '_lastDate', today);
 
-  // local history
   const histKey = user + '_history';
-  const prev = JSON.parse(localStorage.getItem(histKey) || '[]');
-  prev.push({ date:new Date().toISOString(), correct:correctCount, total:answeredCount, pct:answeredCount?Math.round(correctCount/answeredCount*100):0, mistakes:wrongWords });
+  const prev   = JSON.parse(localStorage.getItem(histKey)||'[]');
+  prev.push({
+    date: new Date().toISOString(),
+    correct: correctCount,
+    total: answeredCount,
+    pct: answeredCount?Math.round(correctCount/answeredCount*100):0,
+    mistakes: wrongWords
+  });
   localStorage.setItem(histKey, JSON.stringify(prev));
 
   // push lên Firestore
   db.collection('sessions').add({
-    user, date:new Date().toISOString(),
-    correct:correctCount, total:answeredCount,
-    mistakes:wrongWords
+    user,
+    date: new Date().toISOString(),
+    correct: correctCount,
+    total: answeredCount,
+    mistakes: wrongWords
   }).catch(console.error);
 
   localStorage.removeItem(user + '_session');
@@ -174,15 +183,16 @@ function endSession() {
 }
 
 function renderHistory() {
-  const hist = JSON.parse(localStorage.getItem(user + '_history') || '[]');
+  const hist = JSON.parse(localStorage.getItem(user + '_history')||'[]');
   if (!hist.length) return;
   const tbody = document.querySelector('#history-table tbody');
   tbody.innerHTML = '';
   hist.forEach(r => {
-    const tr=document.createElement('tr');
-    tr.innerHTML= `<td>${new Date(r.date).toLocaleString()}</td>`+
-                  `<td>${r.correct}</td><td>${r.total}</td>`+
-                  `<td>${r.pct}%</td><td>${(r.mistakes||[]).join(', ')}</td>`;
+    const tr = document.createElement('tr');
+    tr.innerHTML =
+      `<td>${new Date(r.date).toLocaleString()}</td>`+
+      `<td>${r.correct}</td><td>${r.total}</td>`+
+      `<td>${r.pct}%</td><td>${(r.mistakes||[]).join(', ')}</td>`;
     tbody.append(tr);
   });
   document.getElementById('history-container').style.display='block';
@@ -192,33 +202,30 @@ document.getElementById('show-analytics-btn').onclick = showAnalytics;
 
 function showAnalytics() {
   const hist = JSON.parse(localStorage.getItem(user + '_history')||'[]');
-  const counts={};
-  hist.forEach(r=> (r.mistakes||[]).forEach(w=>counts[w]=(counts[w]||0)+1) );
-  const entries=Object.entries(counts).sort((a,b)=>b[1]-a[1]).slice(0,10);
-  const labels=entries.map(e=>e[0]), values=entries.map(e=>e[1]);
-
-  const ctx=document.getElementById('mistakeChart').getContext('2d');
-  if(window.mistakeChart) window.mistakeChart.destroy();
-  window.mistakeChart=new Chart(ctx,{
+  const counts = {};
+  hist.forEach(r=> (r.mistakes||[]).forEach(w=>counts[w]=(counts[w]||0)+1));
+  const entries = Object.entries(counts).sort((a,b)=>b[1]-a[1]).slice(0,10);
+  const labels = entries.map(e=>e[0]), values = entries.map(e=>e[1]);
+  const ctx = document.getElementById('mistakeChart').getContext('2d');
+  if (window.mistakeChart) window.mistakeChart.destroy();
+  window.mistakeChart = new Chart(ctx,{
     type:'bar',
-    data:{ labels, datasets:[{ label:'Lỗi sai', data:values, backgroundColor:'#f44336' }]},
-    options:{ scales:{ y:{ beginAtZero:true }}}
+    data:{labels,datasets:[{label:'Lỗi sai',data:values,backgroundColor:'#f44336'}]},
+    options:{scales:{y:{beginAtZero:true}}}
   });
-
-  const ul=document.getElementById('mistakeList'); ul.innerHTML='';
+  const ul = document.getElementById('mistakeList'); ul.innerHTML='';
   entries.forEach(([w,c])=>{ const li=document.createElement('li'); li.textContent=`${w}: sai ${c} lần`; ul.append(li);});
-
   document.getElementById('analytics').style.display='block';
   document.getElementById('analytics').scrollIntoView({behavior:'smooth'});
 }
 
 // login
-document.getElementById('login-btn').onclick=()=>{
-  const v=document.getElementById('username-input').value.trim();
-  if(!v) return alert('Nhập tên tài khoản!');
-  user=v; localStorage.setItem('quiz_user',user);
+document.getElementById('login-btn').onclick = () => {
+  const v = document.getElementById('username-input').value.trim();
+  if (!v) return alert('Nhập tên tài khoản!');
+  user = v; localStorage.setItem('quiz_user', user);
   initQuiz();
 };
 
-function shuffle(a){return a.sort(()=>Math.random()-0.5);} 
+function shuffle(a){return a.sort(()=>Math.random()-0.5);}
 loadData();
