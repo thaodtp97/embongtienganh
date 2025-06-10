@@ -18,28 +18,40 @@
       <div id="welcome"></div>
       <div id="streak">Streak: 0 ngày</div>
       <div id="session-stats">Câu 0/0 (Đúng: 0) - Accuracy: 0%</div>
-      <button id="show-analytics-btn" style="display:none; margin-left:auto; background:#ff9800; color:#fff; border:none; padding:0.5rem 1rem; border-radius:6px; cursor:pointer;">
+      <button id="show-analytics-btn"
+              style="display:none; margin-left:auto; background:#ff9800;
+                     color:#fff; border:none; padding:0.5rem 1rem;
+                     border-radius:6px; cursor:pointer;">
         Xem thống kê
       </button>
     </header>
+
     <div class="quiz-box">
       <h2 id="question">Đang tải…</h2>
       <div class="options"></div>
       <div class="controls">
         <button id="next-btn" style="display:none">Tiếp theo</button>
-        <button id="end-session-btn" style="display:none; background:#f4511e;">Kết thúc session</button>
+        <button id="end-session-btn" style="display:none; background:#f4511e;">
+          Kết thúc session
+        </button>
       </div>
     </div>
-    <div id="history-container" style="display:none">
+
+    <div id="history-container" style="display:none; margin-top:1.5rem">
       <h3>Lịch sử học</h3>
       <table id="history-table">
-        <thead><tr><th>Ngày</th><th>Đúng</th><th>Tổng</th><th>%</th><th>Lỗi</th></tr></thead>
+        <thead>
+          <tr>
+            <th>Ngày</th><th>Đúng</th><th>Tổng</th><th>%</th><th>Lỗi</th>
+          </tr>
+        </thead>
         <tbody></tbody>
       </table>
     </div>
 
-    <!-- Analytics Section -->
-    <section id="analytics" style="display:none; padding:2rem; background:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1); margin-top:2rem;">
+    <section id="analytics" style="display:none; padding:2rem; background:#fff;
+                                   border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1);
+                                   margin-top:2rem;">
       <h3>Thống kê lỗi sai Top 10</h3>
       <canvas id="mistakeChart" width="360" height="200"></canvas>
       <ul id="mistakeList" style="list-style:none; padding:0; margin-top:1rem;"></ul>
@@ -52,17 +64,17 @@
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
   <script>
-    // Firebase config của bạn
+    // Firebase configuration (copy từ Firebase Console → SDK setup → Config)
     const firebaseConfig = {
       apiKey: "AIzaSyDFAu80468VblytwF2UmKXGRAhRM5odGG8",
       authDomain: "embongtienganh.firebaseapp.com",
       projectId: "embongtienganh",
-      storageBucket: "embongtienganh.firebasestorage.app",
+      storageBucket: "embongtienganh.appspot.com",
       messagingSenderId: "616191414364",
       appId: "1:616191414364:web:91a358db8a8a04f69f5699",
       measurementId: "G-X9KNG69VPN"
     };
-    // Khởi tạo Firebase + Firestore
+    // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     const db = firebase.firestore();
   </script>
