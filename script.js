@@ -3,6 +3,7 @@ let data, sessionWords, currentIdx;
 let user, streakCount, lastSessionDate;
 let answeredCount, correctCount;
 let srsData, wrongWords;
+let sessionStart;
 
 async function loadData() {
   data = await fetch('data.json').then(r => r.json());
@@ -14,8 +15,9 @@ async function loadData() {
 function initSRS() {
   const key = 'srs_data';
   const stored = localStorage.getItem(key);
-  if (stored) srsData = JSON.parse(stored);
-  else {
+  if (stored) {
+    srsData = JSON.parse(stored);
+  } else {
     srsData = data.map(item => ({
       word: item.word,
       pos: item.pos,
@@ -31,15 +33,17 @@ function initSRS() {
 }
 
 function initQuiz() {
+  sessionStart = new Date();
+
   streakCount = parseInt(localStorage.getItem(user + '_streak')) || 0;
   lastSessionDate = localStorage.getItem(user + '_lastDate') || null;
   updateStreakDisplay();
 
   const sessKey = user + '_session';
   const idxKey  = user + '_sessionIdx';
-  const storedSess = localStorage.getItem(sessKey);
-  if (storedSess) {
-    sessionWords = JSON.parse(storedSess);
+  const stored = localStorage.getItem(sessKey);
+  if (stored) {
+    sessionWords = JSON.parse(stored);
     currentIdx   = parseInt(localStorage.getItem(idxKey)) || 0;
   } else {
     buildNewSession();
@@ -77,7 +81,9 @@ function updateStreakDisplay() {
 
 function updateHeader() {
   const qNum = Math.min(currentIdx + 1, SESSION_SIZE);
-  const acc = answeredCount ? ((correctCount/answeredCount)*100).toFixed(0) : 0;
+  const acc = answeredCount
+    ? ((correctCount/answeredCount)*100).toFixed(0)
+    : 0;
   document.getElementById('session-stats').textContent =
     `Câu ${qNum}/${SESSION_SIZE} (Đúng: ${correctCount}) - Accuracy: ${acc}%`;
 }
@@ -92,12 +98,15 @@ function showQuestion() {
   document.getElementById('question').textContent =
     `Chọn từ tương ứng với nghĩa: "${cur.meaning}"`;
 
-  const opts = [cur, ...shuffle(srsData.filter(i=>i.word!==cur.word)).slice(0,3)];
+  const opts = [cur, ...shuffle(
+    srsData.filter(i=>i.word!==cur.word)
+  ).slice(0,3)];
   shuffle(opts).forEach(item => {
     const btn = document.createElement('button');
     btn.className = 'option-btn';
-    btn.innerHTML = `<strong>${item.word}</strong><br>` +
-                    `<em>${item.pos}</em> [${item.phonetic}]`;
+    btn.innerHTML =
+      `<strong>${item.word}</strong><br>` +
+      `<em>${item.pos}</em> [${item.phonetic}]`;
     btn.onclick = () => selectAnswer(btn, item);
     document.querySelector('.options').append(btn);
   });
@@ -123,10 +132,12 @@ function selectAnswer(btn, item) {
   if (ok) {
     s.rep++;
     s.interval = s.rep===1?1:(s.rep===2?6:Math.ceil(s.interval*s.ease));
-    s.nextReview = new Date(Date.now()+s.interval*24*3600*1000).toISOString();
+    s.nextReview = new Date(Date.now()+s.interval*24*3600*1000)
+      .toISOString();
   } else {
     s.rep = 0; s.interval = 1;
-    s.nextReview = new Date(Date.now()+24*3600*1000).toISOString();
+    s.nextReview = new Date(Date.now()+24*3600*1000)
+      .toISOString();
   }
   localStorage.setItem('srs_data', JSON.stringify(srsData));
 
@@ -148,11 +159,18 @@ document.getElementById('next-btn').onclick = () => {
 document.getElementById('end-session-btn').onclick = endSession;
 
 function endSession() {
-  const today = new Date().toISOString().slice(0,10);
-  if (lastSessionDate === new Date(Date.now()-24*3600*1000).toISOString().slice(0,10))
-    streakCount++;
-  else if (lastSessionDate !== today)
-    streakCount = 1;
+  const sessionEnd = new Date();
+  const startISO   = sessionStart.toISOString();
+  const endISO     = sessionEnd.toISOString();
+  const diffMs     = sessionEnd - sessionStart;
+  const mins       = Math.floor(diffMs/60000);
+  const secs       = Math.floor((diffMs%60000)/1000);
+  const durStr     = `${mins}m ${secs}s`;
+
+  const today = sessionEnd.toISOString().slice(0,10);
+  if (lastSessionDate === new Date(Date.now()-24*3600*1000)
+      .toISOString().slice(0,10)) streakCount++;
+  else if (lastSessionDate !== today) streakCount = 1;
   lastSessionDate = today;
   localStorage.setItem(user + '_streak', streakCount);
   localStorage.setItem(user + '_lastDate', today);
@@ -160,21 +178,26 @@ function endSession() {
   const histKey = user + '_history';
   const prev   = JSON.parse(localStorage.getItem(histKey)||'[]');
   prev.push({
-    date: new Date().toISOString(),
-    correct: correctCount,
-    total: answeredCount,
-    pct: answeredCount?Math.round(correctCount/answeredCount*100):0,
-    mistakes: wrongWords
+    date: today,
+    startTime: startISO,
+    endTime:   endISO,
+    duration:  durStr,
+    correct:   correctCount,
+    total:     answeredCount,
+    pct:       answeredCount?Math.round(correctCount/answeredCount*100):0,
+    mistakes:  wrongWords
   });
   localStorage.setItem(histKey, JSON.stringify(prev));
 
-  // push lên Firestore
   db.collection('sessions').add({
     user,
-    date: new Date().toISOString(),
-    correct: correctCount,
-    total: answeredCount,
-    mistakes: wrongWords
+    date:       today,
+    startTime:  startISO,
+    endTime:    endISO,
+    duration:   durStr,
+    correct:    correctCount,
+    total:      answeredCount,
+    mistakes:   wrongWords
   }).catch(console.error);
 
   localStorage.removeItem(user + '_session');
@@ -190,12 +213,16 @@ function renderHistory() {
   hist.forEach(r => {
     const tr = document.createElement('tr');
     tr.innerHTML =
-      `<td>${new Date(r.date).toLocaleString()}</td>`+
-      `<td>${r.correct}</td><td>${r.total}</td>`+
-      `<td>${r.pct}%</td><td>${(r.mistakes||[]).join(', ')}</td>`;
+      `<td>${r.date}</td>` +
+      `<td>${new Date(r.startTime).toLocaleTimeString()}</td>` +
+      `<td>${new Date(r.endTime).toLocaleTimeString()}</td>` +
+      `<td>${r.duration}</td>` +
+      `<td>${r.correct}/${r.total}</td>` +
+      `<td>${r.pct}%</td>` +
+      `<td>${(r.mistakes||[]).join(', ')}</td>`;
     tbody.append(tr);
   });
-  document.getElementById('history-container').style.display='block';
+  document.getElementById('history-container').style.display = 'block';
 }
 
 document.getElementById('show-analytics-btn').onclick = showAnalytics;
@@ -203,23 +230,30 @@ document.getElementById('show-analytics-btn').onclick = showAnalytics;
 function showAnalytics() {
   const hist = JSON.parse(localStorage.getItem(user + '_history')||'[]');
   const counts = {};
-  hist.forEach(r=> (r.mistakes||[]).forEach(w=>counts[w]=(counts[w]||0)+1));
-  const entries = Object.entries(counts).sort((a,b)=>b[1]-a[1]).slice(0,10);
-  const labels = entries.map(e=>e[0]), values = entries.map(e=>e[1]);
+  hist.forEach(r => (r.mistakes||[]).forEach(w =>
+    counts[w] = (counts[w]||0)+1
+  ));
+  const ent = Object.entries(counts)
+    .sort((a,b)=>b[1]-a[1]).slice(0,10);
+  const labels = ent.map(e=>e[0]), data = ent.map(e=>e[1]);
   const ctx = document.getElementById('mistakeChart').getContext('2d');
   if (window.mistakeChart) window.mistakeChart.destroy();
-  window.mistakeChart = new Chart(ctx,{
+  window.mistakeChart = new Chart(ctx, {
     type:'bar',
-    data:{labels,datasets:[{label:'Lỗi sai',data:values,backgroundColor:'#f44336'}]},
+    data:{labels,datasets:[{label:'Lỗi sai',data,backgroundColor:'#f44336'}]},
     options:{scales:{y:{beginAtZero:true}}}
   });
   const ul = document.getElementById('mistakeList'); ul.innerHTML='';
-  entries.forEach(([w,c])=>{ const li=document.createElement('li'); li.textContent=`${w}: sai ${c} lần`; ul.append(li);});
+  ent.forEach(([w,c])=>{
+    const li=document.createElement('li');
+    li.textContent = `${w}: sai ${c} lần`;
+    ul.append(li);
+  });
   document.getElementById('analytics').style.display='block';
   document.getElementById('analytics').scrollIntoView({behavior:'smooth'});
 }
 
-// login
+// login handler
 document.getElementById('login-btn').onclick = () => {
   const v = document.getElementById('username-input').value.trim();
   if (!v) return alert('Nhập tên tài khoản!');
@@ -227,5 +261,7 @@ document.getElementById('login-btn').onclick = () => {
   initQuiz();
 };
 
-function shuffle(a){return a.sort(()=>Math.random()-0.5);}
+// util
+function shuffle(a){ return a.sort(()=>Math.random()-0.5); }
+
 loadData();
