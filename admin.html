@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width">
   <title>Admin Dashboard</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
   <style>
-    body{font-family:sans-serif;background:#f5f5f5;padding:2rem;}
-    h1{text-align:center;}
-    table{width:100%;border-collapse:collapse;margin-top:1rem;}
-    th,td{border:1px solid #ccc;padding:8px;text-align:center;}
-    #mistakeChart{max-width:720px;margin:2rem auto;}
+    body { font-family:sans-serif; background:#f5f5f5; padding:2rem; }
+    h1 { text-align:center; margin-bottom:1rem; }
+    table { width:100%; border-collapse:collapse; margin-bottom:2rem; }
+    th, td { border:1px solid #ccc; padding:8px; text-align:center; }
+    #mistakeChart { max-width:720px; margin:auto; }
   </style>
 </head>
 <body>
   <h1>Dashboard Lỗi Sai & Tiến Độ</h1>
+  <table id="userTable">
+    <thead>
+      <tr>
+        <th>User</th><th>Ngày</th><th>Bắt đầu</th><th>Kết thúc</th>
+        <th>Thời gian</th><th>Session</th><th>Correct/Total</th>
+        <th>Accuracy</th><th>#Mistakes</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <canvas id="mistakeChart" width="400" height="200"></canvas>
 
   <script>
-    // same firebaseConfig as index.html
     const firebaseConfig = {
       apiKey: "AIzaSyDFAu80468VblytwF2UmKXGRAhRM5odGG8",
       authDomain: "embongtienganh.firebaseapp.com",
       projectId: "embongtienganh",
-      storageBucket: "embongtienganh.firebasestorage.app",
+      storageBucket: "embongtienganh.appspot.com",
       messagingSenderId: "616191414364",
       appId: "1:616191414364:web:91a358db8a8a04f69f5699",
       measurementId: "G-X9KNG69VPN"
@@ -35,45 +45,58 @@
       const users = {};
       sn.forEach(doc => {
         const s = doc.data();
-        if (!users[s.user]) users[s.user] = { sessions:0, correct:0, total:0, mistakes:[] };
+        if (!users[s.user]) users[s.user] = {
+          sessions: 0, correct: 0, total: 0, mistakes: [], records: []
+        };
         users[s.user].sessions++;
         users[s.user].correct += s.correct;
         users[s.user].total   += s.total;
         users[s.user].mistakes.push(...(s.mistakes||[]));
+        users[s.user].records.push({
+          date: new Date(s.date).toLocaleDateString(),
+          start: new Date(s.startTime).toLocaleTimeString(),
+          end:   new Date(s.endTime).toLocaleTimeString(),
+          dur:   s.duration
+        });
       });
 
-      // Bảng tiến độ & điểm
-      const tbl = document.createElement('table');
-      tbl.innerHTML = `<tr>
-        <th>User</th><th>Session</th><th>Correct/Total</th>
-        <th>Accuracy</th><th>#Mistakes</th>
-      </tr>`;
+      // render table
+      const tbody = document.querySelector('#userTable tbody');
       Object.entries(users).forEach(([u,st]) => {
+        const last = st.records[st.records.length - 1];
         const acc = st.total ? Math.round(st.correct/st.total*100)+'%' : '0%';
-        tbl.innerHTML += `<tr>
-          <td>${u}</td><td>${st.sessions}</td>
-          <td>${st.correct}/${st.total}</td><td>${acc}</td>
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${u}</td>
+          <td>${last.date}</td>
+          <td>${last.start}</td>
+          <td>${last.end}</td>
+          <td>${last.dur}</td>
+          <td>${st.sessions}</td>
+          <td>${st.correct}/${st.total}</td>
+          <td>${acc}</td>
           <td>${st.mistakes.length}</td>
-        </tr>`;
+        `;
+        tbody.append(row);
       });
-      document.body.appendChild(tbl);
 
-      // Biểu đồ Top 10 lỗi
+      // chart mistakes top 10
       const all = {};
-      Object.values(users).forEach(u=>u.mistakes.forEach(w=>all[w]=(all[w]||0)+1));
-      const entries = Object.entries(all).sort((a,b)=>b[1]-a[1]).slice(0,10);
-      const labels = entries.map(e=>e[0]), data=entries.map(e=>e[1]);
-      const canvas = document.createElement('canvas');
-      canvas.id = 'mistakeChart';
-      document.body.appendChild(canvas);
-      new Chart(canvas.getContext('2d'), {
+      Object.values(users).forEach(u => {
+        u.mistakes.forEach(w => all[w] = (all[w]||0) + 1);
+      });
+      const entries = Object.entries(all)
+        .sort((a,b)=>b[1]-a[1]).slice(0,10);
+      const labels = entries.map(e=>e[0]);
+      const data   = entries.map(e=>e[1]);
+      new Chart(document.getElementById('mistakeChart'), {
         type:'bar',
-        data:{labels,datasets:[{label:'Lỗi sai',data,backgroundColor:'#f44336'}]},
-        options:{scales:{y:{beginAtZero:true}}}
+        data:{ labels, datasets:[{ label:'Lỗi sai', data, backgroundColor:'#f44336' }]},
+        options:{ scales:{ y:{ beginAtZero:true }}}
       });
     }).catch(err => {
       console.error(err);
-      alert('Không thể load data từ Firestore.');
+      alert('Không thể load sessions từ Firestore.');
     });
   </script>
 </body>
